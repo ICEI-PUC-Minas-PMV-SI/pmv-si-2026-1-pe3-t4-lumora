@@ -10,16 +10,16 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Divino Armando Batista Soares
+* Caroline Teresa Selvecki
+* Felipe Fernandes Jardim
+* Kamila Júlia do Espírito Santo
+* Luiza Trevenzoli Castor
+* Nicole Mikaely Amaral Santos
 
 ## Orientador
 
-* Nome completo do professor 
+* Luiz Alberto Ferreira Gomes 
 
 # Planejamento
 
