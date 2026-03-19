@@ -8,13 +8,13 @@ Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
+O produto será denominado Lumora  – luz do latim "lumen" que significa iluminação, clareza. "ora" - algo que soa suave, fluido meio etéreo. Ele contará com diversos componentes para atender a necessidade da aplicação e do usuário.
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
+Criar uma ferramenta que funcione do jeito que o cérebro com TDAH precisa: simples, visual, rápida e motivadora, ajudando o usuário a iniciar, manter e concluir tarefas com menos esforço mental. 
 
 ### 3.2.3 Limites do produto
-O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
+Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizando simplicidade e baixa sobrecarga cognitiva. O aplicativo apoia a organização de tarefas diárias para pessoas com Transtorno de Déficit de Atenção e Hiperatividade, sem substituir acompanhamento profissional.
 
 ### 3.2.4 Benefícios do produto
 
