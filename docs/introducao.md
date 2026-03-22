@@ -17,7 +17,7 @@ Isso evidencia que existe uma diferença entre o que as pessoas com TDAH realmen
 
 O objetivo geral deste trabalho é desenvolver um software de apoio destinadoa pessoas com Transtorno do Déficit de Atenção e Hiperatividade (TDAH), buscando reduzir a desorganização, facilitar o gerenciamento de tarefas e compromissos e melhorar a capacidade de foco por meio de uma interface simples, acessível e adaptada às necessidades cognitivas desse público. A proposta consiste em compreender de que forma as dificuldades relacionadas à atenção sustentada, à procrastinação, ao esquecimento e à sobrecarga mental impactam a rotina de pessoas neurodivergentes. Assim, a solução pretende oferecer recursos funcionais alinhados às necessidades reais dos usuários, contribuindo para a melhoria da autonomia, da organização pessoal e do bem-estar emocional.
 
-Objetivos Específicos
+## Objetivos Específicos
 
 • Desenvolver mecanismos que permitam ao usuário acompanhar suas tarefas, compromissos e prazos de forma simples, facilitando a organização da rotina e reduzindo esquecimentos.
 
