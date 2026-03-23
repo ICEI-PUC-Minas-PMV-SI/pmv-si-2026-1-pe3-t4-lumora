@@ -82,6 +82,9 @@ Fluxo Principal:
 3. A notificação é enviada ao usuário.
 4. O usuário visualiza a notificação.
 
+Pós-condições:
+O usuário é informado sobre tarefas ou compromissos por meio de notificação.
+
 #### Gerenciar Tarefas (CSU02)
 
 Sumário:
@@ -134,6 +137,30 @@ e) Sistema exibe "Nenhuma tarefa cadastrada neste dia". <br>
 f) Usuário continua navegando ou cria nova tarefa. <br>
 
 Pós-condições: Uma tarefa foi incluída, removida, seus dados foram alterados e consultados.
+
+#### Configurar lembretes (CSU03)
+
+Sumário:
+Permite ao usuário configurar lembretes associados às tarefas para receber notificações.
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve possuir ao menos uma tarefa cadastrada e acessar a funcionalidade de configuração de lembretes.
+
+Fluxo Principal:
+
+1. O usuário seleciona uma tarefa.
+2. O usuário acessa a opção de configurar lembrete.
+3. O sistema solicita a data e o horário do lembrete.
+4. O usuário define as informações.
+5. O usuário ativa o lembrete por meio do ícone de sino disponível na interface.
+6. O sistema verifica se o lembrete foi ativado.
+7. Caso ativado, o sistema salva o lembrete e agenda a notificação.
+8. Caso o lembrete não seja ativado, a notificação não será enviada.
+
+Pós-condições:
+O lembrete será salvo e a notificação será enviada apenas se o usuário ativar o lembrete por meio do ícone de sino.
 
 ### 3.4.3 Diagrama de Classes 
 
