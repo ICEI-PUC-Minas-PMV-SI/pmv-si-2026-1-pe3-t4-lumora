@@ -1,6 +1,6 @@
 # 2. ESTADO DA ARTE
 
-O Transtorno de Déficit de Atenção e Hiperatividade tem sido amplamente estudado no contexto do uso de tecnologias digitais como suporte às dificuldades relacionadas à organização, planejamento e execução de tarefas. Nesse cenário, aplicativos móveis vêm sendo explorados como ferramentas auxiliares, com foco na estruturação de rotinas, no gerenciamento de atividades e no estímulo à produtividade.
+O Transtorno de Déficit de Atenção e Hiperatividade (TDAH) tem sido amplamente estudado no contexto do uso de tecnologias digitais como suporte às dificuldades relacionadas à organização, planejamento e execução de tarefas. Nesse cenário, aplicativos móveis vêm sendo explorados como ferramentas auxiliares, com foco na estruturação de rotinas, no gerenciamento de atividades e no estímulo à produtividade.
 
 Estudos recentes indicam que soluções digitais com interfaces simples, recursos visuais e mecanismos de lembrete podem contribuir para a redução da sobrecarga cognitiva e para a melhoria da adesão a tarefas diárias. Dessa forma, observa-se um crescimento no desenvolvimento de aplicações voltadas especificamente para esse público, incorporando estratégias adaptadas às suas necessidades cognitivas.
 
