@@ -56,7 +56,7 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 ## 3.4 Modelagem do Sistema
 
 ### 3.4.1 Diagrama de Casos de Uso
-Como observado no diagrama de casos de uso da Figura 1, a secretária poderá gerenciar as matrículas e professores no sistema, enquanto o coordenador, além dessas funções, poderá gerenciar os cursos de aperfeiçoamento.
+Como observado no diagrama de casos de uso, a secretária poderá gerenciar as matrículas e professores no sistema, enquanto o coordenador, além dessas funções, poderá gerenciar os cursos de aperfeiçoamento.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
@@ -161,6 +161,8 @@ Fluxo Principal:
 
 Pós-condições:
 O lembrete será salvo e a notificação será enviada apenas se o usuário ativar o lembrete por meio do ícone de sino.
+
+#### Categorizar Tarefas (CSU04)
 
 ### 3.4.3 Diagrama de Classes 
 
