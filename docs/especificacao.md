@@ -101,17 +101,21 @@ d) O sistema remove a tarefa. <br>
 
 Fluxo Alternativo (3): Alteração
 
-a)	A Secretária altera um ou mais dos detalhes do professor e requisita sua atualização. <br>
-b)	O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados na lista de professores, caso contrário, o erro é reportado. <br>
+a) O usuário seleciona uma tarefa. <br>
+b) O usuário altera os dados. <br>
+c) O sistema confirma a alteração da tarefa. <br>
+d) O sistema valida e atualiza as informações. <br>
  
 Fluxo Alternativo (3): Consulta
+ 
+a) O Usuário acessa lista de tarefas. <br>
+b) O Sistema exibe tarefas por data. <br>
+c) O Sistema exibe tarefas conforme a rolagem. <br>
+d) Nenhuma tarefa é encontrada para um dia. <br>
+e) Sistema exibe "Nenhuma tarefa cadastrada neste dia". <br>
+f) Usuário continua navegando ou cria nova tarefa. <br>
 
-a)	A Secretária opta por pesquisar pelo nome ou código e solicita a consulta sobre a lista de professores. <br>
-b)	O Sistema apresenta uma lista professores. <br>
-c)	A Secretária seleciona o professor. <br>
-d)	O Sistema apresenta os detalhes do professor no formulário de professores. <br>
-
-Pós-condições: Um professor foi inserido ou removido, seus dados foram alterados ou apresentados na tela.
+Pós-condições: Uma tarefa foi incluída, removida, seus dados foram alterados e consultados.
 
 ### 3.4.3 Diagrama de Classes 
 
