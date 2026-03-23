@@ -66,22 +66,25 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
 
 Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
 
-#### Gerenciar Professor (CSU01)
+#### Gerenciar Tarefas (CSU01)
 
-Sumário: A Secretária realiza a gestão (inclusão, remoção, alteração e consulta) dos dados sobre professores.
+Sumário:
+O usuário realiza o gerenciamento de tarefas (inclusão, alteração, remoção e consulta).
 
-Ator Primário: Secretária.
+Ator Primário: Usuário.
 
-Ator Secundário: Coordenador.
-
-Pré-condições: A Secretária deve ser validada pelo Sistema.
+Pré-condições:
+O usuário deve estar com acesso ao aplicativo.
 
 Fluxo Principal:
 
-1) 	A Secretária requisita manutenção de professores.
-2) 	O Sistema apresenta as operações que podem ser realizadas: inclusão de um novo professor, alteração de um professor, a exclusão de um professor e a consulta de dados de um professor.
-3) 	A Secretária seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-4) 	Se a Secretária desejar continuar com a gestão de professores, o caso de uso retorna ao passo 2; caso contrário o caso de uso termina.
+1. O usuário acessa a área de tarefas.
+2. O sistema apresenta a lista de tarefas cadastradas.
+3. O Sistema apresenta as operações que podem ser realizadas: inclusão de uma nova tarefa, alteração, exclusão e a consulta de dados.
+4. O usuário seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
+5. O sistema executa a ação solicitada.
+6. O sistema atualiza a lista de tarefas.
+7. O caso de uso é finalizado. 
 
 Fluxo Alternativo (3): Inclusão
 
