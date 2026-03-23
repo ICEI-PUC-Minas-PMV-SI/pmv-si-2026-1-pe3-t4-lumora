@@ -94,8 +94,9 @@ e) Se válidos, a tarefa é cadastrada; caso contrário, o sistema solicita corr
 
 Fluxo Alternativo (3): Remoção
 
-a)	A Secretária seleciona um professor e requisita ao Sistema que o remova. <br>
-b)	Se o professor pode ser removido, o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato. <br>
+a) O usuário seleciona uma tarefa. <br>
+b) O usuário solicita a exclusão. <br>
+c) O sistema remove a tarefa. <br>
 
 Fluxo Alternativo (3): Alteração
 
