@@ -64,7 +64,25 @@ Como observado no diagrama de casos de uso da Figura 1, a secretária poderá ge
  
 ### 3.4.2 Descrições de Casos de Uso
 
-#### Gerenciar Tarefas (CSU01)
+#### Ativar Notificação (CSU01)
+
+Sumário:
+Permite ao sistema de notificações ativar o envio de alertas ao usuário relacionados a tarefas e lembretes configurados.
+
+Ator Primário: Sistema de Notificações
+Ator Secundário: Usuário
+
+Pré-condições:
+O usuário deve possuir lembretes configurados no sistema.
+
+Fluxo Principal: 
+
+1. O sistema identifica um lembrete programado.
+2. O sistema ativa a notificação no horário definido pelo usuário.
+3. A notificação é enviada ao usuário.
+4. O usuário visualiza a notificação.
+
+#### Gerenciar Tarefas (CSU02)
 
 Sumário:
 O usuário realiza o gerenciamento de tarefas (inclusão, alteração, remoção e consulta).
