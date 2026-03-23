@@ -96,7 +96,8 @@ Fluxo Alternativo (3): Remoção
 
 a) O usuário seleciona uma tarefa. <br>
 b) O usuário solicita a exclusão. <br>
-c) O sistema remove a tarefa. <br>
+c) O sistema confirma a exclusão da tarefa ao usuário. <br>
+d) O sistema remove a tarefa. <br>
 
 Fluxo Alternativo (3): Alteração
 
