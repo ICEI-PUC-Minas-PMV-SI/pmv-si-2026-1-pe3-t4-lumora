@@ -85,13 +85,12 @@ Fluxo Principal:
 7. O caso de uso é finalizado. 
 
 Fluxo Alternativo (3): Inclusão
-
-a)	A Secretária requisita a inclusão de um professor. <br>
-b)	O Sistema apresenta uma janela solicitando o CPF do professor a ser cadastrado. <br>
-c)	A Secretária fornece o dado solicitado. <br>
-d)	O Sistema verifica se o professor já está cadastrado. Se sim, o Sistema reporta o fato e volta ao início; caso contrário, apresenta um formulário em branco para que os detalhes do professor (Código, Nome, Endereço, CEP, Estado, Cidade, Bairro, Telefone, Identidade, Sexo, Fax, CPF, Data do Cadastro e Observação) sejam incluídos. <br>
-e)	A Secretária fornece os detalhes do novo professor. <br>
-f)	O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo professor e a grade listando os professores cadastrados é atualizada; caso contrário, o Sistema reporta o fato, solicita novos dados e repete a verificação. <br>
+ 
+a) O usuário solicita a inclusão de uma nova tarefa.
+b) O sistema apresenta um formulário para preenchimento.
+c) O usuário informa os dados da tarefa (título, hora, duração, subtarefa e descrição).
+d) O sistema valida os dados.
+e) Se válidos, a tarefa é cadastrada; caso contrário, o sistema solicita correção.
 
 Fluxo Alternativo (3): Remoção
 
