@@ -93,7 +93,7 @@ O usuário realiza o gerenciamento de tarefas (inclusão, alteração, remoção
 Ator Primário: Usuário.
 
 Pré-condições:
-O usuário deve estar com acesso ao aplicativo.
+O usuário deve estar com acesso ao aplicação.
 
 Fluxo Principal:
 
