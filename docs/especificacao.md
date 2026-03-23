@@ -86,7 +86,7 @@ Fluxo Principal:
 
 Fluxo Alternativo (3): Inclusão
  
-a) O usuário solicita a inclusão de uma nova tarefa.
+a) O usuário solicita a inclusão de uma nova tarefa. <br>
 b) O sistema apresenta um formulário para preenchimento.
 c) O usuário informa os dados da tarefa (título, hora, duração, subtarefa e descrição).
 d) O sistema valida os dados.
