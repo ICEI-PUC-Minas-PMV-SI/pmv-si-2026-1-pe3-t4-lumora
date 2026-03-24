@@ -138,7 +138,7 @@ f) Usuário continua navegando ou cria nova tarefa. <br>
 
 Pós-condições: Uma tarefa foi incluída, removida, seus dados foram alterados e consultados.
 
-#### Configurar lembretes (CSU03)
+#### Configurar Lembretes (CSU03)
 
 Sumário:
 Permite ao usuário configurar lembretes associados às tarefas para receber notificações.
@@ -163,6 +163,26 @@ Pós-condições:
 O lembrete será salvo e a notificação será enviada apenas se o usuário ativar o lembrete por meio do ícone de sino.
 
 #### Categorizar Tarefas (CSU04)
+
+Sumário:
+Permite ao usuário organizar suas tarefas por categorias e níveis de prioridade, facilitando a visualização, o planejamento e a execução das atividades.
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve possuir tarefas cadastradas.
+
+Fluxo Principal:
+
+1. O usuário acessa uma tarefa.
+2. O usuário seleciona uma categoria para a tarefa.
+3. O usuário define o nível de prioridade (por exemplo: alta, média ou baixa).
+4. O sistema associa a tarefa à categoria e à prioridade selecionadas.
+5. O sistema atualiza a organização das tarefas.
+
+Pós-condições:
+
+A tarefa é organizada de acordo com a categoria e o nível de prioridade definidos pelo usuário.
 
 ### 3.4.3 Diagrama de Classes 
 
