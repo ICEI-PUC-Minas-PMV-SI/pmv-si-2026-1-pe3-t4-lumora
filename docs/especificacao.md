@@ -271,9 +271,11 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 | # | Nome | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| 1	|	Aluno |	Cadastro de informações relativas aos alunos. |
-| 2	| Curso |	Cadastro geral de cursos de aperfeiçoamento. |
-| 3 |	Matrícula |	Cadastro de Matrículas de alunos nos cursos. |
-| 4 |	Turma |	Cadastro de turmas.
-| 5	|	Professor |	Cadastro geral de professores que ministram as disciplinas. |
-| ... |	... |	... |
+| 1	|	Usuário |	Cadastro de informações relativas aos alunos. |
+| 2	| Tarefa |	Cadastro geral de cursos de aperfeiçoamento. |
+| 3 |	Lembrete |	Cadastro de Matrículas de alunos nos cursos. |
+| 4 |	Notificação |	Cadastro de turmas.
+| 5	|	Timer |	Cadastro geral de professores que ministram as disciplinas. |
+| 6 |	Tema |	... |
+| 7 | Imagem | |
+| 8 | UsuárioTema | |
