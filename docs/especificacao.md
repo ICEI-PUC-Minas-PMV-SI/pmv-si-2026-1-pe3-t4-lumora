@@ -271,11 +271,11 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 | # | Nome | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| 1	|	Usuário |	Cadastro de informações relativas aos alunos. |
-| 2	| Tarefa |	Cadastro geral de cursos de aperfeiçoamento. |
-| 3 |	Lembrete |	Cadastro de Matrículas de alunos nos cursos. |
-| 4 |	Notificação |	Cadastro de turmas.
-| 5	|	Timer |	Cadastro geral de professores que ministram as disciplinas. |
-| 6 |	Tema |	... |
-| 7 | Imagem | |
-| 8 | UsuárioTema | |
+| 1	|	Usuário |	Representa o usuário do sistema, responsável por gerenciar tarefas, utilizar o modo foco e personalizar o aplicativo. |
+| 2	| Tarefa |	Representa uma atividade criada pelo usuário, podendo ser acompanhada por tempo e marcada como concluída. |
+| 3 |	Lembrete | Representa um alerta configurado para uma tarefa. |
+| 4 |	Notificação |	Representa a mensagem enviada ao usuário como alerta de eventos (ex: lembretes). |
+| 5	|	Timer |	Representa o controle de tempo de uma tarefa no modo foco. |
+| 6 |	Tema |	Representa a personalização visual do aplicativo, funcionando também como sistema de recompensas (gamificação). |
+| 7 | Imagem | Representa a imagem associada ao perfil do usuário. |
+| 8 | UsuárioTema | Representa a relação entre usuário e temas, indicando quais temas foram desbloqueados e qual está em uso. |
