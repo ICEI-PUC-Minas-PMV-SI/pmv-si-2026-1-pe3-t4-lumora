@@ -56,7 +56,7 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 ## 3.4 Modelagem do Sistema
 
 ### 3.4.1 Diagrama de Casos de Uso
-Como observado no diagrama de casos de uso, o usuário poderá gerenciar suas tarefas no sistema, incluindo organização por categorias e prioridades, além de configurar lembretes e receber notificações para acompanhamento das atividades.
+Nesta seção são apresentadas as descrições dos principais casos de uso do sistema, com o objetivo de detalhar, de forma clara, como o usuário interage com as funcionalidades disponíveis e como o sistema responde a essas ações no contexto de uso.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
@@ -64,108 +64,102 @@ Como observado no diagrama de casos de uso, o usuário poderá gerenciar suas ta
  
 ### 3.4.2 Descrições de Casos de Uso
 
-#### Ativar Notificação (CSU01)
+#### Criar Tarefa (CSU01)
 
 Sumário:
-Permite ao sistema de notificações ativar o envio de alertas ao usuário relacionados a tarefas e lembretes configurados.
-
-Ator Primário: Sistema de Notificações
-Ator Secundário: Usuário
-
-Pré-condições:
-O usuário deve possuir lembretes configurados no sistema.
-
-Fluxo Principal: 
-
-1. O sistema identifica um lembrete programado.
-2. O sistema ativa a notificação no horário definido pelo usuário.
-3. A notificação é enviada ao usuário.
-4. O usuário visualiza a notificação.
-
-Pós-condições:
-O usuário é informado sobre tarefas ou compromissos por meio de notificação.
-
-#### Gerenciar Tarefas (CSU02)
-
-Sumário:
-O usuário realiza o gerenciamento de tarefas (inclusão, alteração, remoção e consulta).
-
-Ator Primário: Usuário.
-
-Pré-condições:
-O usuário deve estar com acesso ao aplicação.
-
-Fluxo Principal:
-
-1. O usuário acessa a área de tarefas.
-2. O sistema apresenta a lista de tarefas cadastradas.
-3. O Sistema apresenta as operações que podem ser realizadas: inclusão de uma nova tarefa, alteração, exclusão e a consulta de dados.
-4. O usuário seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-5. O sistema executa a ação solicitada.
-6. O sistema atualiza a lista de tarefas.
-7. O caso de uso é finalizado. 
-
-Fluxo Alternativo (3): Inclusão
- 
-a) O usuário solicita a inclusão de uma nova tarefa. <br>
-b) O sistema apresenta um formulário para preenchimento. <br>
-c) O usuário informa os dados da tarefa (título, hora, duração, subtarefa e descrição). <br>
-d) O sistema valida os dados. <br>
-e) Se válidos, a tarefa é cadastrada; caso contrário, o sistema solicita correção. <br>
-
-Fluxo Alternativo (3): Remoção
-
-a) O usuário seleciona uma tarefa. <br>
-b) O usuário solicita a exclusão. <br>
-c) O sistema confirma a exclusão da tarefa ao usuário. <br>
-d) O sistema remove a tarefa. <br>
-
-Fluxo Alternativo (3): Alteração
-
-a) O usuário seleciona uma tarefa. <br>
-b) O usuário altera os dados. <br>
-c) O sistema confirma a alteração da tarefa. <br>
-d) O sistema valida e atualiza as informações. <br>
- 
-Fluxo Alternativo (3): Consulta
- 
-a) O Usuário acessa lista de tarefas. <br>
-b) O Sistema exibe tarefas por data. <br>
-c) O Sistema exibe tarefas conforme a rolagem. <br>
-d) Nenhuma tarefa é encontrada para um dia. <br>
-e) Sistema exibe "Nenhuma tarefa cadastrada neste dia". <br>
-f) Usuário continua navegando ou cria nova tarefa. <br>
-
-Pós-condições: Uma tarefa foi incluída, removida, seus dados foram alterados e consultados.
-
-#### Configurar Lembretes (CSU03)
-
-Sumário:
-Permite ao usuário configurar lembretes associados às tarefas para receber notificações.
+Permite que o usuário cadastre uma nova tarefa no sistema.
 
 Ator Primário: Usuário
 
 Pré-condições:
-O usuário deve possuir ao menos uma tarefa cadastrada e acessar a funcionalidade de configuração de lembretes.
+O usuário deve estar autenticado no sistema.
+
+Fluxo Principal: 
+
+1. O usuário acessa a função de criação de tarefas por meio da tela incial do sistema.
+2. O sistema apresenta um formulário apresentando os campos necessários para o cadastro da tarefa.
+3. O usuário preenche as informações solicitadas, como título, descrição e prazo, contendo também funcionalidades opcionais de categorizar, priorizar e definir um lembrete a tarefa.
+4. Após o preenchimento, o usuário confirma a criação da tarefa.
+5. O sistema realiza a validação dos dados informados e, estando corretos, registra a tarefa no sistema.
+
+Fluxo Alternativo (3): Categorizar tarefa
+
+a) Durante o processo de criação, o usuário pode optar por atribuir uma categoria e grau de prioridade à tarefa. <br>
+b) O sistema exibe as categorias e prioridades disponíveis para seleção. <br>
+c) O usuário escolhe a categoria e prioridade desejada. <br>
+d) O sistema associa a categoria e prioridade à tarefa antes de efetivar o cadastro. <br>
+
+Fluxo Alternativo (3): Definir lembrete 
+
+a) O usuário pode optar por configurar um lembrete para a tarefa. <br>
+b) O sistema solicita a definição de data e horário. <br>
+c) O usuário informa os dados e ativa o lembrete por meio de um ícone de sininho presente na interface. <br>
+d) O sistema registra o lembrete vinculado à tarefa. <br>
+e) Caso o usuário não ative o sininho, o lembrete não será considerado ativo e, portanto, nenhuma notificação será enviada. <br>
+
+Pós-condições:
+A tarefa é registrada no sistema e passa a fazer parte da lista de atividades do usuário.
+
+#### Editar Tarefas (CSU02)
+
+Sumário:
+Permite ao usuário alterar informações de uma tarefa previamente cadastrada, possibilitando ajustes conforme sua necessidade.
+
+Ator Primário: Usuário.
+
+Pré-condições:
+É necessário que exista ao menos uma tarefa cadastrada no sistema.
 
 Fluxo Principal:
 
-1. O usuário seleciona uma tarefa.
-2. O usuário acessa a opção de configurar lembrete.
-3. O sistema solicita a data e o horário do lembrete.
-4. O usuário define as informações.
-5. O usuário ativa o lembrete por meio do ícone de sino disponível na interface.
-6. O sistema verifica se o lembrete foi ativado.
-7. Caso ativado, o sistema salva o lembrete e agenda a notificação.
-8. Caso o lembrete não seja ativado, a notificação não será enviada.
+1. O usuário acessa a lista de tarefas disponíveis.
+2. O usuário seleciona a tarefa que deseja editar.
+3. O sistema apresenta os dados atuais da tarefa.
+4. O usuário realiza as modificações necessárias.
+5. O sistema valida as alterações e atualiza as informações da tarefa.
+
+Fluxo Alternativo (4): Alterar lembrete
+ 
+a) Durante a edição, o usuário pode acessar a opção de configuração de lembrete. <br>
+b) O sistema exibe as informações já cadastradas. <br>
+c) O usuário altera os dados ou ativa/desativa o lembrete por meio do ícone de sininho. <br>
+d) O sistema valida e atualiza o lembrete conforme as alterações realizadas. <br>
 
 Pós-condições:
-O lembrete será salvo e a notificação será enviada apenas se o usuário ativar o lembrete por meio do ícone de sino.
+A tarefa passa a conter as alterações realizadas pelo usuário.
 
-#### Categorizar Tarefas (CSU04)
+#### Excluir Tarefa (CSU03)
 
 Sumário:
-Permite ao usuário organizar suas tarefas por categorias e níveis de prioridade, facilitando a visualização, o planejamento e a execução das atividades.
+Permite ao usuário remover uma tarefa do sistema, quando ela não for mais necessária.
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve possuir ao menos uma tarefa cadastrada.
+
+Fluxo Principal:
+
+1. O usuário acessa a lista de tarefas cadastradas.
+2. O usuário seleciona a tarefa que deseja excluir.
+3. O usuário solicita a exclusão da tarefa.
+4. O sistema exibe uma mensagem solicitando a confirmação da ação por parte do usuário, evitando exclusões acidentais.
+5. O usuário confirma a exclusão.
+6. O sistema remove a tarefa da lista.
+
+Fluxo Alternativo (4): Cancelar exclusão 
+
+a) Ao receber a solicitação de confirmação, o usuário pode optar por cancelar a operação. <br>
+b) O sistema interrompe o processo de exclusão. <br>
+c) A tarefa permanece cadastrada, sem qualquer alteração. <br>
+
+Pós-condições:
+A tarefa é removida do sistema apenas se a exclusão for confirmada pelo usuário.
+
+#### Consultar Tarefas (CSU04)
+
+Sumário:
+Permite ao usuário visualizar os detalhes de uma tarefa cadastrada, facilitando o acompanhamento das atividades.
 
 Ator Primário: Usuário
 
@@ -174,15 +168,95 @@ O usuário deve possuir tarefas cadastradas.
 
 Fluxo Principal:
 
-1. O usuário acessa uma tarefa.
-2. O usuário seleciona uma categoria para a tarefa.
-3. O usuário define o nível de prioridade (por exemplo: alta, média ou baixa).
-4. O sistema associa a tarefa à categoria e à prioridade selecionadas.
-5. O sistema atualiza a organização das tarefas.
+1. O usuário acessa a lista de tarefas disponíveis.
+2. O usuário seleciona uma tarefa de interesse.
+3. O sistema exibe todas as informações relacionadas à tarefa selecionada.
 
 Pós-condições:
 
-A tarefa é organizada de acordo com a categoria e o nível de prioridade definidos pelo usuário.
+As informações da tarefa são apresentadas ao usuário.
+
+#### Criar Conta (CSU05)
+
+Sumário:
+Permite que um novo usuário realize seu cadastro no sistema, tornando-se apto a utilizar suas funcionalidades.
+
+Ator Primário: Usuário
+
+Fluxo Principal: 
+
+1. O usuário acessa a opção de criação de conta.
+2. O sistema apresenta um formulário de cadastro.
+3. O usuário preenche os dados solicitados.
+4. O sistema valida as informações fornecidas.
+5. Estando tudo correto, o sistema cria a conta do usuário.
+
+Pós-condições:
+
+O usuário passa a ter acesso ao sistema por meio de sua conta.
+
+#### Configurar Perfil (CSU06)
+
+Sumário:
+Permite ao usuário personalizar suas informações dentro do sistema. 
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve possuir uma conta cadastrada. 
+
+Fluxo Principal: 
+
+1. O usuário acessa a área de perfil.
+2. O sistema apresenta os dados cadastrados atualmente.
+3. O usuário escolhe qual informação deseja alterar, dados pessoais, senha ou tema.
+4. O sistema processa e aplica as alterações realizadas.
+
+Fluxos Alternativos (3): Alterar dados
+
+a) O usuário seleciona a opção de edição de dados pessoais. <br>
+b) O sistema exibe as informações atuais.<br>
+c) O usuário realiza as alterações desejadas. <br>
+d) O sistema valida e salva os novos dados. <br>
+
+Fluxo Alternativo (3): Alterar senha
+
+a) O usuário acessa a opção de alteração de senha. <br>
+b) O sistema solicita a senha atual e a nova senha. <br>
+c) O usuário informa a nova senha. <br>
+d) O sistema valida e atualiza a senha com sucesso. <br>
+
+Fluxo Alternativo (3): Alterar tema
+
+a) O usuário acessa a opção de personalização de tema. <br>
+b) O sistema apresenta as opções disponíveis. <br>
+c) O usuário seleciona o tema desejado. <br>
+d) O sistema aplica a alteração na interface. <br>
+
+Pós-condições:
+
+As preferências e dados do usuário são atualizados conforme suas escolhas.
+
+#### Iniciar Modo Foco (CSU07)
+
+Sumário:
+Permite ao usuário iniciar uma sessão de foco por meio de um timer, auxiliando na concentração durante a execução de tarefas.
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve estar utilizando o sistema.
+
+Fluxo Principal:
+1. O usuário acessa e configura a funcionalidade de modo foco.
+2. O usuário inicia a sessão de foco.
+4. O sistema inicia o timer com o tempo definido.
+3. O sistema exibe a contagem regressiva, permitindo o acompanhamento do tempo restante.
+
+Pós-condições:
+
+A sessão de foco é finalizada conforme a interação do usuário.
+
 
 ### 3.4.3 Diagrama de Classes 
 
