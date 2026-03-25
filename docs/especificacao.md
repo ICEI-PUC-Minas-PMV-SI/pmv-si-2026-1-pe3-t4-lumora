@@ -76,9 +76,9 @@ O usuário deve estar autenticado no sistema.
 
 Fluxo Principal: 
 
-1. O usuário acessa a função de criação de tarefas por meio da tela incial do sistema.
+1. O usuário acessa a função de criação de tarefas por meio da tela inicial do sistema.
 2. O sistema apresenta um formulário apresentando os campos necessários para o cadastro da tarefa.
-3. O usuário preenche as informações solicitadas, como título, descrição e prazo, contendo também funcionalidades opcionais de categorizar, priorizar e definir um lembrete a tarefa.
+3. O usuário preenche as informações solicitadas, como título, descrição e prazo, podendo incluir funcionalidades opcionais, como categorização, definição de prioridade e configuração de lembretes para a tarefa.
 4. Após o preenchimento, o usuário confirma a criação da tarefa.
 5. O sistema realiza a validação dos dados informados e, estando corretos, registra a tarefa no sistema.
 
@@ -100,7 +100,7 @@ e) Caso o usuário não ative o sininho, o lembrete não será considerado ativo
 Pós-condições:
 A tarefa é registrada no sistema e passa a fazer parte da lista de atividades do usuário.
 
-#### Editar Tarefas (CSU02)
+#### Editar Tarefa (CSU02)
 
 Sumário:
 Permite ao usuário alterar informações de uma tarefa previamente cadastrada, possibilitando ajustes conforme sua necessidade.
@@ -156,7 +156,7 @@ c) A tarefa permanece cadastrada, sem qualquer alteração. <br>
 Pós-condições:
 A tarefa é removida do sistema apenas se a exclusão for confirmada pelo usuário.
 
-#### Consultar Tarefas (CSU04)
+#### Consultar Tarefa (CSU04)
 
 Sumário:
 Permite ao usuário visualizar os detalhes de uma tarefa cadastrada, facilitando o acompanhamento das atividades.
@@ -212,7 +212,7 @@ Fluxo Principal:
 3. O usuário escolhe qual informação deseja alterar, dados pessoais, senha ou tema.
 4. O sistema processa e aplica as alterações realizadas.
 
-Fluxos Alternativos (3): Alterar dados
+Fluxos Alternativo (3): Alterar dados
 
 a) O usuário seleciona a opção de edição de dados pessoais. <br>
 b) O sistema exibe as informações atuais.<br>
@@ -255,7 +255,7 @@ Fluxo Principal:
 
 Pós-condições:
 
-A sessão de foco é finalizada conforme a interação do usuário.
+A sessão de foco é executada e finalizada conforme as ações realizadas pelo usuário.
 
 
 ### 3.4.3 Diagrama de Classes 
