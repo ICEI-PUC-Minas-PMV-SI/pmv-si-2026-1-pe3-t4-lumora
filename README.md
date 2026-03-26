@@ -6,9 +6,9 @@
 
 `SEMESTRE: 3º`
 
-O presente projeto propõe o desenvolvimento de uma aplicação voltada ao apoio da organização da rotina de pessoas com Transtorno do Déficit de Atenção e Hiperatividade (TDAH). A proposta leva em consideração dificuldades comuns relacionadas ao foco, à gestão do tempo e à organização de tarefas, que impactam diretamente o cotidiano desses indivíduos.
+O presente projeto propõe o desenvolvimento de uma aplicação voltada ao apoio da organização da rotina de pessoas com Transtorno do Déficit de Atenção e Hiperatividade (TDAH). A iniciativa considera dificuldades recorrentes relacionadas ao foco, à gestão do tempo e à organização de tarefas, que impactam diretamente o cotidiano e o desempenho desses indivíduos.
 
-Nesse sentido, busca-se elaborar uma solução que contribua para tornar as atividades diárias mais organizadas e claras, auxiliando na execução de tarefas e promovendo uma rotina mais equilibrada.
+Nesse contexto, busca-se desenvolver uma solução que contribua para tornar as atividades diárias mais claras e estruturadas, auxiliando na execução de tarefas e promovendo maior autonomia, organização e equilíbrio na rotina.
 ## Integrantes
 
 * Divino Armando Batista Soares
