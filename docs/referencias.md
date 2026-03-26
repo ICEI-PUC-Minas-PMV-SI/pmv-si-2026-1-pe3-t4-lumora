@@ -24,4 +24,6 @@ TIIMO. Tiimo App. Disponível em: https://www.tiimoapp.com.
 
 TOROUS, J.; POWELL, A. C. Current research and trends in the use of smartphone applications for psychiatry. Journal of Mental Health, v. 24, n. 3, p. 160–164, 2015. 
 
+WORLD WIDE WEB CONSORTIUM (W3C). Web Content Accessibility Guidelines (WCAG) 2.1. 2018. Disponível em: https://www.w3.org/TR/WCAG21/. Acesso em: 26 mar. 2026.  
+
 ZHANG, S.; LI, S.; LI, Q. Understood: Real-Time Communication Support for Adults with ADHD Using Mixed Reality. arXiv, 2025. Disponível em: https://arxiv.org/abs/2507.18151.  

@@ -38,12 +38,20 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 
 ### 3.3.2 Requisitos Não Funcionais
 
-| Código | Requisito Não Funcional (Restrição) |
-|--------------------|------------------------------------|
-| RNF1 | O ambiente operacional a ser utilizado é o Windows XP. |
-| RNF2 | O sistema deverá executar em um computador configurado com uma impressora de tecnologia laser ou de jato de tinta, a ser usada para impressão dos relatórios. |
-| RNF3 |	Segurança	O produto deve restringir o acesso por meio de senhas individuais para o usuário. |
-| ... |	... |	... |
+| Código | Requisito Não Funcional (Restrição) | Descrição |
+|--------|---------------------------------------|-----------|
+| RNF1 | Usabilidade – Interface simplificada | A interface deve ser limpa e intuitiva, com no máximo 3 cliques para acessar qualquer funcionalidade principal, reduzindo a sobrecarga cognitiva do usuário com TDAH. |
+| RNF2 | Usabilidade – Feedback visual imediato | Toda ação do usuário (criar, editar, excluir, concluir tarefa) deve fornecer feedback visual em até 1 segundo, por meio de animações, cores ou mensagens de confirmação. |
+| RNF3 | Desempenho – Tempo de resposta | As páginas do sistema devem ser carregadas em no máximo 3 segundos em conexões de banda larga padrão (10 Mbps ou superior). |
+| RNF4 | Desempenho – Timer do Modo Foco | O timer do modo foco deve manter precisão de contagem com margem de erro inferior a 1 segundo por sessão de até 60 minutos. |
+| RNF5 | Segurança – Autenticação | O sistema deve restringir o acesso por meio de autenticação com e-mail e senha individual, garantindo que cada usuário acesse apenas seus próprios dados. |
+| RNF6 | Segurança – Armazenamento de senhas | As senhas dos usuários devem ser armazenadas de forma criptografada utilizando algoritmos de hash seguros (ex.: bcrypt), nunca em texto puro. |
+| RNF7 | Disponibilidade | O sistema deve estar disponível pelo menos 99% do tempo durante o horário de uso comum (6h às 00h), permitindo manutenções programadas fora desse período. |
+| RNF8 | Compatibilidade – Navegadores | O sistema deve ser compatível com as versões mais recentes dos navegadores Google Chrome, Mozilla Firefox, Microsoft Edge e Safari. |
+| RNF9 | Compatibilidade – Responsividade | A interface deve ser responsiva, adaptando-se adequadamente a dispositivos com resolução mínima de 360px de largura (smartphones) até monitores desktop. |
+| RNF10 | Acessibilidade – Contraste e legibilidade | O sistema deve respeitar uma proporção mínima de contraste de 4.5:1 entre texto e fundo, conforme as diretrizes WCAG 2.1 nível AA, garantindo legibilidade em todos os temas disponíveis. |
+| RNF11 | Confiabilidade – Persistência de dados | Os dados do usuário (tarefas, configurações, temas desbloqueados) devem ser persistidos em banco de dados, garantindo que não sejam perdidos em caso de fechamento inesperado do navegador. |
+| RNF12 | Manutenibilidade – Padrão de código | O código-fonte deve seguir padrões de organização e boas práticas de desenvolvimento, facilitando a manutenção e evolução do sistema por diferentes membros da equipe. |
 
 ### 3.3.3 Usuários 
 
