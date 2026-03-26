@@ -76,18 +76,18 @@ O usuário deve estar autenticado no sistema.
 
 Fluxo Principal: 
 
-1. O usuário acessa a função de criação de tarefas por meio da tela inicial do sistema.
-2. O sistema apresenta um formulário apresentando os campos necessários para o cadastro da tarefa.
-3. O usuário preenche as informações solicitadas, como título, descrição e prazo, podendo incluir funcionalidades opcionais, como categorização, definição de prioridade e configuração de lembretes para a tarefa.
+1. O usuário acessa a funcionalidade de criação de tarefas por meio da tela inicial do sistema.
+2. O sistema apresenta um formulário com os campos necessários para o cadastro da tarefa.
+3. O usuário preenche as informações solicitadas, como título, descrição, prazo..., podendo incluir funcionalidades opcionais, como categorização, definição de prioridade e configuração de lembretes.
 4. Após o preenchimento, o usuário confirma a criação da tarefa.
-5. O sistema realiza a validação dos dados informados e, estando corretos, registra a tarefa no sistema.
+5. O sistema valida os dados informados e, estando corretos, registra a tarefa no sistema.
 
 Fluxo Alternativo (3): Categorizar tarefa
 
-a) Durante o processo de criação, o usuário pode optar por atribuir uma categoria e grau de prioridade à tarefa. <br>
+a) Durante o processo de preenchimento, o usuário pode optar por definit uma categoria e prioridade para a tarefa. <br>
 b) O sistema exibe as categorias e prioridades disponíveis para seleção. <br>
-c) O usuário escolhe a categoria e prioridade desejada. <br>
-d) O sistema associa a categoria e prioridade à tarefa antes de efetivar o cadastro. <br>
+c) O usuário seleciona a categoria e prioridade desejadas. <br>
+d) O sistema associa a categoria e a prioridade à tarefa antes de finalizar o cadastro. <br>
 
 Fluxo Alternativo (3): Definir lembrete 
 
@@ -95,7 +95,7 @@ a) O usuário pode optar por configurar um lembrete para a tarefa. <br>
 b) O sistema solicita a definição de data e horário. <br>
 c) O usuário informa os dados e ativa o lembrete por meio de um ícone de sininho presente na interface. <br>
 d) O sistema registra o lembrete vinculado à tarefa. <br>
-e) Caso o usuário não ative o sininho, o lembrete não será considerado ativo e, portanto, nenhuma notificação será enviada. <br>
+e) Caso o usuário não ative o sininho, o lembrete não será considerado ativo e nenhuma notificação será enviada. <br>
 
 Pós-condições:
 A tarefa é registrada no sistema e passa a fazer parte da lista de atividades do usuário.
@@ -121,8 +121,8 @@ Fluxo Principal:
 Fluxo Alternativo (4): Alterar lembrete
  
 a) Durante a edição, o usuário pode acessar a opção de configuração de lembrete. <br>
-b) O sistema exibe as informações já cadastradas. <br>
-c) O usuário altera os dados ou ativa/desativa o lembrete por meio do ícone de sininho. <br>
+b) O sistema exibe os dados atuais do lembrete. <br>
+c) O usuário altera as informações ou ativa/desativa o lembrete por meio do ícone de sininho. <br>
 d) O sistema valida e atualiza o lembrete conforme as alterações realizadas. <br>
 
 Pós-condições:
@@ -169,12 +169,12 @@ O usuário deve possuir tarefas cadastradas.
 Fluxo Principal:
 
 1. O usuário acessa a lista de tarefas disponíveis.
-2. O usuário seleciona uma tarefa de interesse.
+2. O usuário seleciona à tarefa de interesse.
 3. O sistema exibe todas as informações relacionadas à tarefa selecionada.
 
 Pós-condições:
 
-As informações da tarefa são apresentadas ao usuário.
+As informações da tarefa são exibidas ao usuário.
 
 #### Criar Conta (CSU05)
 
@@ -198,7 +198,7 @@ O usuário passa a ter acesso ao sistema por meio de sua conta.
 #### Configurar Perfil (CSU06)
 
 Sumário:
-Permite ao usuário personalizar suas informações dentro do sistema. 
+Permite ao usuário personalizar suas informações no sistema. 
 
 Ator Primário: Usuário
 
@@ -208,14 +208,14 @@ O usuário deve possuir uma conta cadastrada.
 Fluxo Principal: 
 
 1. O usuário acessa a área de perfil.
-2. O sistema apresenta os dados cadastrados atualmente.
-3. O usuário escolhe qual informação deseja alterar, dados pessoais, senha ou tema.
+2. O sistema apresenta os dados cadastrados.
+3. O usuário escolhe qual informação deseja alterar (dados pessoais, senha ou tema).
 4. O sistema processa e aplica as alterações realizadas.
 
 Fluxos Alternativo (3): Alterar dados
 
 a) O usuário seleciona a opção de edição de dados pessoais. <br>
-b) O sistema exibe as informações atuais.<br>
+b) O sistema exibe os dados atuais.<br>
 c) O usuário realiza as alterações desejadas. <br>
 d) O sistema valida e salva os novos dados. <br>
 
@@ -229,13 +229,13 @@ d) O sistema valida e atualiza a senha com sucesso. <br>
 Fluxo Alternativo (3): Alterar tema
 
 a) O usuário acessa a opção de personalização de tema. <br>
-b) O sistema apresenta as opções disponíveis. <br>
+b) O sistema apresenta os temas disponíveis. <br>
 c) O usuário seleciona o tema desejado. <br>
 d) O sistema aplica a alteração na interface. <br>
 
 Pós-condições:
 
-As preferências e dados do usuário são atualizados conforme suas escolhas.
+As informações e preferências do usuário são atualizados conforme suas escolhas.
 
 #### Iniciar Modo Foco (CSU07)
 
@@ -248,10 +248,26 @@ Pré-condições:
 O usuário deve estar utilizando o sistema.
 
 Fluxo Principal:
-1. O usuário acessa e configura a funcionalidade de modo foco.
-2. O usuário inicia a sessão de foco.
+1. O usuário acessa a funcionalidade de modo foco. 
+2. O usuário configura o tempo da sessão.
+3. O usuário inicia a sessão de foco.
 4. O sistema inicia o timer com o tempo definido.
-3. O sistema exibe a contagem regressiva, permitindo o acompanhamento do tempo restante.
+5. O sistema exibe a contagem regressiva, permitindo o acompanhamento do tempo restante.
+
+Fluxo Alternativo (3): Pausar timer
+
+a) O usuário pode pausar a sessão durante sua execução. <br>
+b) O sistema interrompe temporariamente a contagem do tempo. <br>
+
+Fluxo Alternativo (3): Adicionar tempo 
+
+a) O usuário opta por adicionar mais tempo à sessão. <br>
+b) O sistema ajusta o tempo restante do timer. <br>
+
+Fluxo Alternativo (3): Finalizar foco 
+
+a) O usuário opta encerrar a sessão antes do término. <br>
+b) O sistema finaliza o timer. <br>
 
 Pós-condições:
 
