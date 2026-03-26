@@ -284,7 +284,7 @@ A sessão de foco é executada e finalizada conforme as ações realizadas pelo 
 
 ### 3.4.3 Diagrama de Classes 
 
-A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela.
+Nesta seção são apresentadas as descrições dos principais casos de uso do sistema, com o objetivo de detalhar, de forma clara e organizada, como ocorre a interação do usuário com as funcionalidades disponíveis, bem como o comportamento do sistema diante das ações realizadas durante sua utilização.
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
