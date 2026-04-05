@@ -8,10 +8,10 @@ Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado Lumora  – luz do latim "lumen" que significa iluminação, clareza. "ora" - algo que soa suave, fluido meio etéreo. Ele contará com diversos componentes para atender a necessidade da aplicação e do usuário.
+O produto será denominado Lumora  – luz do latim "lumen" que significa iluminação, clareza. "ora" - algo que soa suave, fluido meio etéreo. O software Lumara tem como finalidade oferecer ao usuário uma plataforma eficiente para organização e gerenciamento de suas atividades diárias. Por meio do sistema, o usuário poderá criar, editar e excluir tarefas, além de configurar lembretes para auxiliar no cumprimento de prazos e compromissos. O Lumara disponibiliza também um modo foco, que permite ao usuário se concentrar em suas atividades com o auxílio de um temporizador (timer), contribuindo para o aumento da produtividade e melhor gestão do tempo.
 
 ### 3.2.2 Missão do produto
-Criar uma ferramenta que funcione do jeito que o cérebro com TDAH precisa: simples, visual, rápida e motivadora, ajudando o usuário a iniciar, manter e concluir tarefas com menos esforço mental. 
+Criar uma ferramenta que funcione de acordo com as necessidades cognitivas de pessoas com TDAH sendo: simples, visual, rápida e motivadora, ajudando o usuário a iniciar, manter e concluir tarefas. A aplicação será projetada para ser intuitiva, reduzindo a sobrecarga mental e facilitando a organização das atividades do dia a dia
 
 ### 3.2.3 Limites do produto
 Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizando simplicidade e baixa sobrecarga cognitiva. O aplicativo apoia a organização de tarefas diárias para pessoas com Transtorno de Déficit de Atenção e Hiperatividade, sem substituir acompanhamento profissional.
