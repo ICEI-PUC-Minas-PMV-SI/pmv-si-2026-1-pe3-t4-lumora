@@ -1,9 +1,8 @@
 # 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
-Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
 
 ## 3.1 Objetivos deste documento
-Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de Informação da PUC Minas que devem ser atendidas pelo projeto SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento.
+Este documento tem como finalidade descrever de forma clara e detalhada os requisitos e as funcionalidades do Software Lumora, evidenciando seus principais componentes a o objetivo que a aplicação busca atingir. 
 
 ## 3.2 Escopo do produto
 
@@ -14,7 +13,7 @@ O produto será denominado Lumora  – luz do latim "lumen" que significa ilumin
 Criar uma ferramenta que funcione de acordo com as necessidades cognitivas de pessoas com TDAH sendo: simples, visual, rápida e motivadora, ajudando o usuário a iniciar, manter e concluir tarefas. A aplicação será projetada para ser intuitiva, reduzindo a sobrecarga mental e facilitando a organização das atividades do dia a dia
 
 ### 3.2.3 Limites do produto
-Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizando simplicidade e baixa sobrecarga cognitiva. O aplicativo apoia a organização de tarefas diárias para pessoas com Transtorno de Déficit de Atenção e Hiperatividade, sem substituir acompanhamento profissional.
+Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizando simplicidade e baixa sobrecarga cognitiva. O software apoia a organização de tarefas diárias para pessoas com Transtorno de Déficit de Atenção e Hiperatividade, sem substituir acompanhamento profissional.
 
 ### 3.2.4 Benefícios do produto
 
@@ -22,8 +21,13 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 |--------------------|------------------------------------|----------------------------------------|
 |1	| Facilidade no cadastro de dados |	Essencial |
 |2 | Facilidade na recuperação de informações | Essencial | 
-|3 | Segurança no cadastro de matrículas | Essencial | 
-|4	| Melhoria na comunicação com os alunos	| Recomendável | 
+|3 | Redução da desorganização por meio de gerenciamento simplificado de tarefas | Essencial | 
+|4	| Melhoria do foco com uso de timer, divisão de tarefas e checklists	| Essencial |
+|5	| Diminuição da sobrecarga cognitiva com interface simples e intuitiva	| Essencial |
+|6	| Apoio à memória com lembretes e acompanhamento de prazos	| Essencial |
+|7	| Aumento da produtividade e conclusão de tarefas	| Recomendável |
+|8	| Melhoria do bem-estar emocional e sensação de controle	| Recomendável |
+
 
 ## 3.3 Descrição geral do produto
 
