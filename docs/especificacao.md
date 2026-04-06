@@ -35,10 +35,16 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 
 | Código | Requisito Funcional (Funcionalidade) | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Curso de Aperfeiçoamento |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Cursos de Aperfeiçoamento |
-| RF2 |	Gerenciar Professor	| Processamento de Inclusão, Alteração, Exclusão e Consulta de professores |
-| RF3	| Gerenciar Matrícula |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Matrículas de alunos em Cursos de Aperfeiçoamento |
-| ... |	...	| ... |
+| RF1 | Gerenciar tarefas |	Permite criar, editar, excluir, consultar e concluir tarefas |
+| RF2 |	Categorizar tarefas	| Permite organizar suas tarefas por meio de categorias |
+| RF3	| Configurar lembretes |	Permite definir datas e horários para lembretes de tarefas |
+| RF4 |	Enviar notificações	| Envia notificações ao usuário com base nos lembretes definidos |
+| RF5 | Gerenciar perfil | Permite criar, editar e visualizar informações do perfil do usuário
+| RF6 |  |  |
+| RF7 |  |  |
+| RF8 |  |  | 
+| RF9 |  |  |
+| RF10 |  |  |
 
 ### 3.3.2 Requisitos Não Funcionais
 
