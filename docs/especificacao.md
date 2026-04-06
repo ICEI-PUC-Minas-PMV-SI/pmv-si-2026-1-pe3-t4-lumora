@@ -1,20 +1,19 @@
 # 3. DOCUMENTO DE ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE
 
-Nesta parte do trabalho você deve detalhar a documentação dos requisitos do sistema proposto de acordo com as seções a seguir. Ressalta-se que aqui é utilizado como exemplo um sistema de gestão de cursos de aperfeiçoamento.
 
 ## 3.1 Objetivos deste documento
-Descrever e especificar as necessidades da Coordenação do Curso de Sistemas de Informação da PUC Minas que devem ser atendidas pelo projeto SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento.
+Este documento tem como finalidade descrever de forma clara e detalhada os requisitos e as funcionalidades do Software Lumora, evidenciando seus principais componentes a o objetivo que a aplicação busca atingir. 
 
 ## 3.2 Escopo do produto
 
 ### 3.2.1 Nome do produto e seus componentes principais
-O produto será denominado SCCA – Sistema de Cadastro de Cursos de Aperfeiçoamento. Ele terá somente um componente (módulo) com os devidos elementos necessários à gestão de cursos.
+O produto será denominado Lumora  – luz do latim "lumen" que significa iluminação, clareza. "ora" - algo que soa suave, fluido meio etéreo. O software Lumora tem como finalidade oferecer ao usuário uma plataforma eficiente para organização e gerenciamento de suas atividades diárias. Por meio do sistema, o usuário poderá criar, editar e excluir tarefas, além de configurar lembretes para auxiliar no cumprimento de prazos e compromissos. O Lumora disponibiliza também um modo foco, que permite ao usuário se concentrar em suas atividades com o auxílio de um temporizador (timer), contribuindo para o aumento da produtividade e melhor gestão do tempo.
 
 ### 3.2.2 Missão do produto
-Gerenciar informações sobre a oferta de cursos de aperfeiçoamento, gerenciar a composição das turmas, alunos, professores e matrículas. 
+Auxiliar pessoas que possuem TDAH no planejamento e organização de tarefas, proporcionando redução de sobrecarga cognitiva por meio de uma experiência simples, visual, rápida e motivadora, ajudando o usuário a iniciar, manter e concluir suas atividades diárias. Através de uma interface intuitiva, o produto visa reduzir a sobrecarga mental e facilitar a organização das tarefas de forma leve e fluida.
 
 ### 3.2.3 Limites do produto
-O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcelas do curso, pagamento a professore e agendamentos. O SCCA não contempla o atendimento a vários cursos de Sistemas de Informação de outras unidades da PUC Minas.
+Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizando simplicidade e baixa sobrecarga cognitiva. O software apoia a organização de tarefas diárias para pessoas com Transtorno de Déficit de Atenção e Hiperatividade, sem substituir acompanhamento profissional.
 
 ### 3.2.4 Benefícios do produto
 
@@ -22,111 +21,300 @@ O SCCA não fornece nenhuma forma de avaliação de alunos, pagamento de parcela
 |--------------------|------------------------------------|----------------------------------------|
 |1	| Facilidade no cadastro de dados |	Essencial |
 |2 | Facilidade na recuperação de informações | Essencial | 
-|3 | Segurança no cadastro de matrículas | Essencial | 
-|4	| Melhoria na comunicação com os alunos	| Recomendável | 
+|3 | Redução da desorganização por meio de gerenciamento simplificado de tarefas | Essencial | 
+|4	| Melhoria do foco com uso de timer, divisão de tarefas e checklists	| Essencial |
+|5	| Diminuição da sobrecarga cognitiva com interface simples e intuitiva	| Essencial |
+|6	| Apoio à memória com lembretes e acompanhamento de prazos	| Essencial |
+|7	| Aumento da produtividade e conclusão de tarefas	| Recomendável |
+|8	| Melhoria do bem-estar emocional e sensação de controle	| Recomendável |
+
 
 ## 3.3 Descrição geral do produto
 
 ### 3.3.1 Requisitos Funcionais
 
-| Código | Requisito Funcional (Funcionalidade) | Descrição |
-|--------------------|------------------------------------|----------------------------------------|
-| RF1 | Gerenciar Curso de Aperfeiçoamento |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Cursos de Aperfeiçoamento |
-| RF2 |	Gerenciar Professor	| Processamento de Inclusão, Alteração, Exclusão e Consulta de professores |
-| RF3	| Gerenciar Matrícula |	Processamento de Inclusão, Alteração, Exclusão e Consulta de Matrículas de alunos em Cursos de Aperfeiçoamento |
-| ... |	...	| ... |
+| Código de Requisito | Requisito Funcional            | Descrição                                                                 |
+|--------------------|------------------------------|---------------------------------------------------------------------------|
+| RF01               | Cadastro de usuário          | Permitir que o usuário crie uma conta com e-mail e senha.                |
+| RF02               | Login de usuário             | Permitir que o usuário acesse sua conta com credenciais válidas.         |
+| RF03               | Criar tarefas                | Permitir ao usuário adicionar tarefas à sua rotina diária.               |
+| RF04               | Editar tarefas               | Permitir modificar informações de uma tarefa existente.                  |
+| RF05               | Excluir tarefas              | Permitir remover tarefas da rotina.                                      |
+| RF06               | Definir horários             | Permitir atribuir horário de início e fim para cada tarefa.              |
+| RF07               | Notificações                 | Enviar lembretes quando uma tarefa estiver próxima de iniciar.           |
+| RF08               | Temporizador visual          | Exibir contagem regressiva para a tarefa atual.                          |
+| RF09               | Visualização de agenda       | Mostrar as tarefas organizadas por dia/horário.                          |
+| RF10               | Marcar tarefa como concluída | Permitir ao usuário marcar tarefas finalizadas.                          |
+| RF11               | Personalização visual        | Permitir uso de cores ou ícones para diferenciar tarefas.                |
+| RF12               | Repetição de tarefas         | Permitir configurar tarefas recorrentes (diárias, semanais).             |
+| RF13               | Modo foco                    | Destacar apenas a tarefa atual para reduzir distrações.                  |
+| RF14               | Sincronização de dados       | Salvar e sincronizar dados do usuário (ex: na nuvem).                    |
+| RF15               | Histórico de tarefas         | Permitir visualizar tarefas já concluídas anteriormente.                 |
+
 
 ### 3.3.2 Requisitos Não Funcionais
 
-| Código | Requisito Não Funcional (Restrição) |
-|--------------------|------------------------------------|
-| RNF1 | O ambiente operacional a ser utilizado é o Windows XP. |
-| RNF2 | O sistema deverá executar em um computador configurado com uma impressora de tecnologia laser ou de jato de tinta, a ser usada para impressão dos relatórios. |
-| RNF3 |	Segurança	O produto deve restringir o acesso por meio de senhas individuais para o usuário. |
-| ... |	... |	... |
+| Código | Requisito Não Funcional (Restrição) | Descrição |
+|--------|---------------------------------------|-----------|
+| RNF1 | Usabilidade – Interface simplificada | A interface deve ser limpa e intuitiva, com no máximo 3 cliques para acessar qualquer funcionalidade principal, reduzindo a sobrecarga cognitiva do usuário com TDAH. |
+| RNF2 | Usabilidade – Feedback visual imediato | Toda ação do usuário (criar, editar, excluir, concluir tarefa) deve fornecer feedback visual em até 1 segundo, por meio de animações, cores ou mensagens de confirmação. |
+| RNF3 | Desempenho – Tempo de resposta | As páginas do sistema devem ser carregadas em no máximo 3 segundos em conexões de banda larga padrão (10 Mbps ou superior). |
+| RNF4 | Desempenho – Timer do Modo Foco | O timer do modo foco deve manter precisão de contagem com margem de erro inferior a 1 segundo por sessão de até 60 minutos. |
+| RNF5 | Segurança – Autenticação | O sistema deve restringir o acesso por meio de autenticação com e-mail e senha individual, garantindo que cada usuário acesse apenas seus próprios dados. |
+| RNF6 | Segurança – Armazenamento de senhas | As senhas dos usuários devem ser armazenadas de forma criptografada utilizando algoritmos de hash seguros (ex.: bcrypt), nunca em texto puro. |
+| RNF7 | Disponibilidade | O sistema deve estar disponível pelo menos 99% do tempo durante o horário de uso comum (6h às 00h), permitindo manutenções programadas fora desse período. |
+| RNF8 | Compatibilidade – Navegadores | O sistema deve ser compatível com as versões mais recentes dos navegadores Google Chrome, Mozilla Firefox, Microsoft Edge e Safari. |
+| RNF9 | Compatibilidade – Responsividade | A interface deve ser responsiva, adaptando-se adequadamente a dispositivos com resolução mínima de 360px de largura (smartphones) até monitores desktop. |
+| RNF10 | Acessibilidade – Contraste e legibilidade | O sistema deve respeitar uma proporção mínima de contraste de 4.5:1 entre texto e fundo, conforme as diretrizes WCAG 2.1 nível AA, garantindo legibilidade em todos os temas disponíveis. |
+| RNF11 | Confiabilidade – Persistência de dados | Os dados do usuário (tarefas, configurações, temas desbloqueados) devem ser persistidos em banco de dados, garantindo que não sejam perdidos em caso de fechamento inesperado do navegador. |
+| RNF12 | Manutenibilidade – Padrão de código | O código-fonte deve seguir padrões de organização e boas práticas de desenvolvimento, facilitando a manutenção e evolução do sistema por diferentes membros da equipe. |
 
 ### 3.3.3 Usuários 
 
 | Ator | Descrição |
 |--------------------|------------------------------------|
-| Coordenador |	Usuário gerente do sistema responsável pelo cadastro e manutenção de cursos de aperfeiçoamento. Possui acesso geral ao sistema. |
-| Secretaria |	Usuário responsável por registros de alunos, professores, turmas e gerência de matrículas. |
-| ... |	... |	... |
+| Usuário |	Usuário principal do sistema, responsável pelo gerenciamento de tarefas, incluindo criação, edição, organização e conclusão de atividades, bem como pela utilização de funcionalidades de apoio à produtividade, como o timer de foco e a configuração de lembretes. |
+
 
 ## 3.4 Modelagem do Sistema
 
 ### 3.4.1 Diagrama de Casos de Uso
-Como observado no diagrama de casos de uso da Figura 1, a secretária poderá gerenciar as matrículas e professores no sistema, enquanto o coordenador, além dessas funções, poderá gerenciar os cursos de aperfeiçoamento.
+Nesta seção são apresentadas as descrições dos principais casos de uso do sistema, com o objetivo de detalhar, de forma clara, como o usuário interage com as funcionalidades disponíveis e como o sistema responde a essas ações no contexto de uso.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
 
-![dcu](https://github.com/user-attachments/assets/41f6b731-b44e-43aa-911f-423ad6198f47)
+![dcu](/src/img/diagrama-caso-de-uso.png)
  
 ### 3.4.2 Descrições de Casos de Uso
 
-Cada caso de uso deve ter a sua descrição representada nesta seção. Exemplo:
+#### Criar Tarefa (CSU01)
 
-#### Gerenciar Professor (CSU01)
+Sumário:
+Permite que o usuário cadastre uma nova tarefa no sistema.
 
-Sumário: A Secretária realiza a gestão (inclusão, remoção, alteração e consulta) dos dados sobre professores.
+Ator Primário: Usuário
 
-Ator Primário: Secretária.
+Pré-condições:
+O usuário deve estar autenticado no sistema.
 
-Ator Secundário: Coordenador.
+Fluxo Principal: 
 
-Pré-condições: A Secretária deve ser validada pelo Sistema.
+1. O usuário acessa a funcionalidade de criação de tarefas por meio da tela inicial do sistema.
+2. O sistema apresenta um formulário com os campos necessários para o cadastro da tarefa.
+3. O usuário preenche as informações solicitadas, como título, descrição, prazo..., podendo incluir funcionalidades opcionais, como categorização, definição de prioridade e configuração de lembretes.
+4. Após o preenchimento, o usuário confirma a criação da tarefa.
+5. O sistema valida os dados informados e, estando corretos, registra a tarefa no sistema.
+
+Fluxo Alternativo (3): Categorizar tarefa
+
+a) Durante o processo de preenchimento, o usuário pode optar por definit uma categoria e prioridade para a tarefa. <br>
+b) O sistema exibe as categorias e prioridades disponíveis para seleção. <br>
+c) O usuário seleciona a categoria e prioridade desejadas. <br>
+d) O sistema associa a categoria e a prioridade à tarefa antes de finalizar o cadastro. <br>
+
+Fluxo Alternativo (3): Definir lembrete 
+
+a) O usuário pode optar por configurar um lembrete para a tarefa. <br>
+b) O sistema solicita a definição de data e horário. <br>
+c) O usuário informa os dados e ativa o lembrete por meio de um ícone de sininho presente na interface. <br>
+d) O sistema registra o lembrete vinculado à tarefa. <br>
+e) Caso o usuário não ative o sininho, o lembrete não será considerado ativo e nenhuma notificação será enviada. <br>
+
+Pós-condições:
+A tarefa é registrada no sistema e passa a fazer parte da lista de atividades do usuário.
+
+#### Editar Tarefa (CSU02)
+
+Sumário:
+Permite ao usuário alterar informações de uma tarefa previamente cadastrada, possibilitando ajustes conforme sua necessidade.
+
+Ator Primário: Usuário.
+
+Pré-condições:
+É necessário que exista ao menos uma tarefa cadastrada no sistema.
 
 Fluxo Principal:
 
-1) 	A Secretária requisita manutenção de professores.
-2) 	O Sistema apresenta as operações que podem ser realizadas: inclusão de um novo professor, alteração de um professor, a exclusão de um professor e a consulta de dados de um professor.
-3) 	A Secretária seleciona a operação desejada: Inclusão, Exclusão, Alteração ou Consulta, ou opta por finalizar o caso de uso.
-4) 	Se a Secretária desejar continuar com a gestão de professores, o caso de uso retorna ao passo 2; caso contrário o caso de uso termina.
+1. O usuário acessa a lista de tarefas disponíveis.
+2. O usuário seleciona a tarefa que deseja editar.
+3. O sistema apresenta os dados atuais da tarefa.
+4. O usuário realiza as modificações necessárias.
+5. O sistema valida as alterações e atualiza as informações da tarefa.
 
-Fluxo Alternativo (3): Inclusão
-
-a)	A Secretária requisita a inclusão de um professor. <br>
-b)	O Sistema apresenta uma janela solicitando o CPF do professor a ser cadastrado. <br>
-c)	A Secretária fornece o dado solicitado. <br>
-d)	O Sistema verifica se o professor já está cadastrado. Se sim, o Sistema reporta o fato e volta ao início; caso contrário, apresenta um formulário em branco para que os detalhes do professor (Código, Nome, Endereço, CEP, Estado, Cidade, Bairro, Telefone, Identidade, Sexo, Fax, CPF, Data do Cadastro e Observação) sejam incluídos. <br>
-e)	A Secretária fornece os detalhes do novo professor. <br>
-f)	O Sistema verifica a validade dos dados. Se os dados forem válidos, inclui o novo professor e a grade listando os professores cadastrados é atualizada; caso contrário, o Sistema reporta o fato, solicita novos dados e repete a verificação. <br>
-
-Fluxo Alternativo (3): Remoção
-
-a)	A Secretária seleciona um professor e requisita ao Sistema que o remova. <br>
-b)	Se o professor pode ser removido, o Sistema realiza a remoção; caso contrário, o Sistema reporta o fato. <br>
-
-Fluxo Alternativo (3): Alteração
-
-a)	A Secretária altera um ou mais dos detalhes do professor e requisita sua atualização. <br>
-b)	O Sistema verifica a validade dos dados e, se eles forem válidos, altera os dados na lista de professores, caso contrário, o erro é reportado. <br>
+Fluxo Alternativo (4): Alterar lembrete
  
-Fluxo Alternativo (3): Consulta
+a) Durante a edição, o usuário pode acessar a opção de configuração de lembrete. <br>
+b) O sistema exibe os dados atuais do lembrete. <br>
+c) O usuário altera as informações ou ativa/desativa o lembrete por meio do ícone de sininho. <br>
+d) O sistema valida e atualiza o lembrete conforme as alterações realizadas. <br>
 
-a)	A Secretária opta por pesquisar pelo nome ou código e solicita a consulta sobre a lista de professores. <br>
-b)	O Sistema apresenta uma lista professores. <br>
-c)	A Secretária seleciona o professor. <br>
-d)	O Sistema apresenta os detalhes do professor no formulário de professores. <br>
+Pós-condições:
+A tarefa passa a conter as alterações realizadas pelo usuário.
 
-Pós-condições: Um professor foi inserido ou removido, seus dados foram alterados ou apresentados na tela.
+#### Excluir Tarefa (CSU03)
+
+Sumário:
+Permite ao usuário remover uma tarefa do sistema, quando ela não for mais necessária.
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve possuir ao menos uma tarefa cadastrada.
+
+Fluxo Principal:
+
+1. O usuário acessa a lista de tarefas cadastradas.
+2. O usuário seleciona a tarefa que deseja excluir.
+3. O usuário solicita a exclusão da tarefa.
+4. O sistema exibe uma mensagem solicitando a confirmação da ação por parte do usuário, evitando exclusões acidentais.
+5. O usuário confirma a exclusão.
+6. O sistema remove a tarefa da lista.
+
+Fluxo Alternativo (4): Cancelar exclusão 
+
+a) Ao receber a solicitação de confirmação, o usuário pode optar por cancelar a operação. <br>
+b) O sistema interrompe o processo de exclusão. <br>
+c) A tarefa permanece cadastrada, sem qualquer alteração. <br>
+
+Pós-condições:
+A tarefa é removida do sistema apenas se a exclusão for confirmada pelo usuário.
+
+#### Consultar Tarefa (CSU04)
+
+Sumário:
+Permite ao usuário visualizar os detalhes de uma tarefa cadastrada, facilitando o acompanhamento das atividades.
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve possuir tarefas cadastradas.
+
+Fluxo Principal:
+
+1. O usuário acessa a lista de tarefas disponíveis.
+2. O usuário seleciona à tarefa de interesse.
+3. O sistema exibe todas as informações relacionadas à tarefa selecionada.
+
+Pós-condições:
+
+As informações da tarefa são exibidas ao usuário.
+
+#### Criar Conta (CSU05)
+
+Sumário:
+Permite que um novo usuário realize seu cadastro no sistema, tornando-se apto a utilizar suas funcionalidades.
+
+Ator Primário: Usuário
+
+Fluxo Principal: 
+
+1. O usuário acessa a opção de criação de conta.
+2. O sistema apresenta um formulário de cadastro.
+3. O usuário preenche os dados solicitados.
+4. O sistema valida as informações fornecidas.
+5. Estando tudo correto, o sistema cria a conta do usuário.
+
+Pós-condições:
+
+O usuário passa a ter acesso ao sistema por meio de sua conta.
+
+#### Configurar Perfil (CSU06)
+
+Sumário:
+Permite ao usuário personalizar suas informações no sistema. 
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve possuir uma conta cadastrada. 
+
+Fluxo Principal: 
+
+1. O usuário acessa a área de perfil.
+2. O sistema apresenta os dados cadastrados.
+3. O usuário escolhe qual informação deseja alterar (dados pessoais, senha ou tema).
+4. O sistema processa e aplica as alterações realizadas.
+
+Fluxos Alternativo (3): Alterar dados
+
+a) O usuário seleciona a opção de edição de dados pessoais. <br>
+b) O sistema exibe os dados atuais.<br>
+c) O usuário realiza as alterações desejadas. <br>
+d) O sistema valida e salva os novos dados. <br>
+
+Fluxo Alternativo (3): Alterar senha
+
+a) O usuário acessa a opção de alteração de senha. <br>
+b) O sistema solicita a senha atual e a nova senha. <br>
+c) O usuário informa a nova senha. <br>
+d) O sistema valida e atualiza a senha com sucesso. <br>
+
+Fluxo Alternativo (3): Alterar tema
+
+a) O usuário acessa a opção de personalização de tema. <br>
+b) O sistema apresenta os temas disponíveis. <br>
+c) O usuário seleciona o tema desejado. <br>
+d) O sistema aplica a alteração na interface. <br>
+
+Pós-condições:
+
+As informações e preferências do usuário são atualizados conforme suas escolhas.
+
+#### Iniciar Modo Foco (CSU07)
+
+Sumário:
+Permite ao usuário iniciar uma sessão de foco por meio de um timer, auxiliando na concentração durante a execução de tarefas.
+
+Ator Primário: Usuário
+
+Pré-condições:
+O usuário deve estar utilizando o sistema.
+
+Fluxo Principal:
+1. O usuário acessa a funcionalidade de modo foco. 
+2. O usuário configura o tempo da sessão.
+3. O usuário inicia a sessão de foco.
+4. O sistema inicia o timer com o tempo definido.
+5. O sistema exibe a contagem regressiva, permitindo o acompanhamento do tempo restante.
+
+Fluxo Alternativo (3): Pausar timer
+
+a) O usuário pode pausar a sessão durante sua execução. <br>
+b) O sistema interrompe temporariamente a contagem do tempo. <br>
+
+Fluxo Alternativo (3): Adicionar tempo 
+
+a) O usuário opta por adicionar mais tempo à sessão. <br>
+b) O sistema ajusta o tempo restante do timer. <br>
+
+Fluxo Alternativo (3): Finalizar foco 
+
+a) O usuário opta encerrar a sessão antes do término. <br>
+b) O sistema finaliza o timer. <br>
+
+Pós-condições:
+
+A sessão de foco é executada e finalizada conforme as ações realizadas pelo usuário.
+
 
 ### 3.4.3 Diagrama de Classes 
 
-A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a identificação do funcionário responsável pelo registro, bem com os dados do aluno e turmas. Para uma disciplina podemos ter diversas turmas, mas apenas um professor responsável por ela.
+Nesta seção são apresentadas as descrições dos principais casos de uso do sistema, com o objetivo de detalhar, de forma clara e organizada, como ocorre a interação do usuário com as funcionalidades disponíveis, bem como o comportamento do sistema diante das ações realizadas durante sua utilização.
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-![image](https://github.com/user-attachments/assets/abc7591a-b46f-4ea2-b8f0-c116b60eb24e)
+![image](/src/img/Diagrama-de-classes-lumora.png)
 
 
 ### 3.4.4 Descrições das Classes 
 
 | # | Nome | Descrição |
 |--------------------|------------------------------------|----------------------------------------|
-| 1	|	Aluno |	Cadastro de informações relativas aos alunos. |
-| 2	| Curso |	Cadastro geral de cursos de aperfeiçoamento. |
-| 3 |	Matrícula |	Cadastro de Matrículas de alunos nos cursos. |
-| 4 |	Turma |	Cadastro de turmas.
-| 5	|	Professor |	Cadastro geral de professores que ministram as disciplinas. |
-| ... |	... |	... |
+| 1	|	Usuário |	Representa o usuário do sistema, responsável por gerenciar tarefas, utilizar o modo foco e personalizar o aplicativo. |
+| 2	| Tarefa |	Representa uma atividade criada pelo usuário, podendo ser acompanhada por tempo e marcada como concluída. |
+| 3 |	Lembrete | Representa um alerta configurado para uma tarefa. |
+| 4 |	Notificação |	Representa a mensagem enviada ao usuário como alerta de eventos (ex: lembretes). |
+| 5	|	Timer |	Representa o controle de tempo de uma tarefa no modo foco. |
+| 6 |	Tema |	Representa a personalização visual do aplicativo, funcionando também como sistema de recompensas (gamificação). |
+| 7 | Imagem | Representa a imagem associada ao perfil do usuário. |
+| 8 | UsuárioTema | Representa a relação entre usuário e temas, indicando quais temas foram desbloqueados e qual está em uso. |
