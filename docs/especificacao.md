@@ -61,9 +61,8 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 
 | Ator | Descrição |
 |--------------------|------------------------------------|
-| Coordenador |	Usuário gerente do sistema responsável pelo cadastro e manutenção de cursos de aperfeiçoamento. Possui acesso geral ao sistema. |
-| Secretaria |	Usuário responsável por registros de alunos, professores, turmas e gerência de matrículas. |
-| ... |	... |	... |
+| Usuário |	Usuário principal do sistema, responsável pelo gerenciamento de tarefas, incluindo criação, edição, organização e conclusão de atividades, bem como pela utilização de funcionalidades de apoio à produtividade, como o timer de foco e a configuração de lembretes. |
+
 
 ## 3.4 Modelagem do Sistema
 
