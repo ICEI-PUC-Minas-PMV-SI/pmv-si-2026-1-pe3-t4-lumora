@@ -1,20 +1,42 @@
 # 1. INTRODUÇÃO
 
-Contextualizar a área de pesquisa do trabalho, apresentando conceitos e dados relacionados antes de apresentar a problemática a ser investigada.
+O Transtorno do Déficit de Atenção e Hiperatividade (TDAH) é um transtorno do neurodesenvolvimento de origem neurológica e genética, cujos principais sintomas são a desatenção, a impulsividade e a hiperatividade. Esses sintomas podem acompanhar o indivíduo desde a infância até a vida adulta, impactando diretamente sua organização, desempenho acadêmico e profissional e bem-estar emocional (BARKLEY,2015).
+
+Apesar da relevância do transtorno, grande parte das ferramentas digitais de produtividade disponíveis no mercado não considera as necessidades cognitivas específicas desse público, como a baixa tolerância à sobrecarga visual e a necessidade de estímulos adequados para manutenção do foco (ABDA, 2026). Diante dessa lacuna, este trabalho propõe o desenvolvimento de uma aplicação voltada a pessoas com TDAH, com interface simplificada, recursos de apoio a concentração e elementos de gamificação. As seções seguintes detalham o problema identificado, os objetivos do projeto e sua justificativa.
 
 ## 1.1. Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. 
-Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
+Pessoas com TDAH frequentemente apresentam dificuldades para manter a atenção em tarefas longas, iniciar atividades, organizar compromissos e lembrar-se de prazos ou responsabilidades. Essas dificuldades impactam diretamente a produtividade, o desempenho acadêmico e profissional, além do bem-estar emocional. Ter muitas tarefas ao mesmo tempo pode sobrecarregar a mente, fazendo com que a pessoa adie atividades, esqueça compromissos com frequência e se sinta constantemente desorganizada.
+
+Atualmente, muitas ferramentas digitais de organização e produtividade disponíveis no mercado são desenvolvidas pensando em um padrão de funcionamento mental considerado típico. Aplicativos tradicionais de listas de tarefas e agendas digitais priorizam estruturas lineares, múltiplas categorias e grande volume de informações visuais, o que pode gerar distração e aumentar a dificuldade de uso para pessoas neurodivergentes. Embora existam diversas soluções tecnológicas no mercado voltadas à organização pessoal, elas geralmente não consideram as necessidades específicas de indivíduos com TDAH, como estímulos adequados, divisão clara de etapas, feedback frequente e redução de sobrecarga visual.
+
+Isso evidencia que existe uma diferença entre o que as pessoas com TDAH realmente precisam e o que as ferramentas tecnológicas atuais oferecem, tornando esse um problema importante tanto socialmente quanto tecnologicamente. 
 
 ## 1.2. Objetivos do trabalho
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. O objetivo geral deve resumir e apresentar a ideia central de um trabalho, descrevendo também a sua finalidade. Os objetivos específicos darão uma maior delimitação ao tema, além de detalhar os processos necessários para a realização do trabalho.
+O objetivo geral deste trabalho é desenvolver um software de apoio destinadoa pessoas com Transtorno do Déficit de Atenção e Hiperatividade (TDAH), buscando reduzir a desorganização, facilitar o gerenciamento de tarefas e compromissos e melhorar a capacidade de foco por meio de uma interface simples, acessível e adaptada às necessidades cognitivas desse público. A proposta consiste em compreender de que forma as dificuldades relacionadas à atenção sustentada, à procrastinação, ao esquecimento e à sobrecarga mental impactam a rotina dessas pessoas. Assim, a solução pretende oferecer recursos funcionais alinhados às necessidades reais dos usuários, contribuindo para a melhoria da autonomia, da organização pessoal e do bem-estar emocional.
+
+#### Objetivos Específicos
+
+• Desenvolver mecanismos que permitam ao usuário acompanhar suas tarefas, compromissos e prazos de forma simples, facilitando a organização da rotina e reduzindo esquecimentos.
+
+• Implementar recursos de apoio ao foco, como timer, checklists e divisão de tarefas em etapas menores, auxiliando na execução de atividades longas ou complexas.
+
+• Criar uma interface visual simplificada, com baixa sobrecarga cognitiva, tornando o uso mais intuitivo e adequado para pessoas com TDAH.
 
 ## 1.3. Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O Transtorno do Déficit de Atenção com Hiperatividade (TDAH) é um distúrbio neurológico, de causas genéticas, que pode apresentar sintomas desde a infância e pode acompanhar o indivíduo até a vida adulta (ABDA, 2026). O diagnóstico, geralmente realizado em crianças, e em menor número em adolescentes e adultos, é fundamental para a realização do tratamento e melhoria de vida do paciente. Os sintomas principais são desatenção, inquietude e impulsividade, sendo que os mesmos, podem se apresentar simultaneamente no mesmo indivíduo, causando prejuízos educacionais e sociais.
+
+Neste contexto, o uso de tecnologias para organização de tarefas e gestão de tempo pode facilitar o dia a dia do paciente diagnosticado. Para estes, manter a organização de tarefas diárias pode ser um desafio devido à baixa resistência à frustração, dificuldade de regulação emocional e perda de foco na realização de tarefas caso algum estímulo interfira neste processo.
+Entretanto, para que o objetivo da aplicação seja alcançado, o planejamento deve ser realizado com foco em driblar os sintomas apresentados pela condição. Uma forma de alcançar este feito, é a construção de uma aplicação em formato de gamificação, oferecendo recompensas ao usuário ao término de uma atividade programada anteriormente. Vale ressaltar que, quando ocorrer um erro por parte do usuário, acumular notificações negativas ou “dar bronca”, pode gerar o abandono da plataforma devido à frustração. Além disso, é recomendável o bloqueio de notificações de outras aplicações durante a execução de tarefas, por exemplo, notificações de redes sociais, como, Instagram, WhatsApp, X (antigo Twitter) entre outros. Dentre as características ideais para a aplicação, também podemos listar uma interface limpa, com foco no minimalismo e uma paleta de cores que não cause muitos estímulos.
+
+Portanto, este projeto tem como finalidade a criação de uma aplicação acessível, disponível para Android (Sistema Operacional majoritariamente utilizado no Brasil), com recompensas instantâneas para manter o engajamento do usuário. O sistema visa, também, permitir que o usuário personalize o nível de estímulo gerado pela aplicação de acordo com suas necessidades, sejam elas voltadas à desatenção ou à hiperatividade.
 
 ## 1.4. Público alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
+O público-alvo da aplicação são pessoas com (TDAH) Transtorno do Déficit de Atenção com Hiperatividade que enfrentam dificuldades relacionadas à organização de tarefas, gestão do tempo e manutenção do foco em atividades diárias. Entre esses usuários, destacam-se principalmente estudantes universitários e jovens profissionais que precisam lidar com múltiplas responsabilidades acadêmicas, profissionais e pessoais.
+
+Em geral, esses usuários possuem familiaridade com tecnologia, utilizam smartphones e aplicativos no dia a dia e buscam ferramentas digitais que auxiliem na organização de suas rotinas e compromissos.
+
+Esses usuários podem apresentar diferentes níveis de autonomia e organização, mas compartilham desafios comuns relacionados à procrastinação, esquecimento de tarefas e dificuldade em priorizar atividades. Muitos dependem de lembretes digitais, listas ou aplicativos de produtividade para estruturar suas atividades.Portanto, a aplicação deve considerar usuários que possuem boa relação com dispositivos móveis e interfaces digitais, mas que necessitam de soluções simples, intuitivas e visualmente claras para facilitar o planejamento e o acompanhamento de suas tarefas.
