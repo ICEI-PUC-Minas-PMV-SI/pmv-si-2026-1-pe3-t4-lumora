@@ -33,43 +33,24 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 
 ### 3.3.1 Requisitos Funcionais
 
-| Código | Requisito Funcional (Funcionalidade) | Descrição |
-|--------------------|------------------------------------|----------------------------------------|
-| RF1 | Criar Tarefa |	O sistema deve permitir que o usuário crie uma nova tarefa informando dados como título, descrição, data e duração. |
-| RF2 |	Editar Tarefa	| O sistema deve permitir que o usuário edite as informações de uma tarefa existente. |
-| RF3	| Excluir Tarefa |	O sistema deve permitir que o usuário exclua uma tarefa. |
-| RF4 |	Categorizar Tarefa	| O sistema deve permitir que o usuário associe uma tarefa a uma categoria. |
-| RF5 | Gerenciar perfil | Permite criar, editar e visualizar informações do perfil do usuário
-| RF6 | Gerenciar Categorias | O sistema deve permitir que o usuário crie, edite e exclua categorias. |
-| RF7 | Consultar Tarefas | O sistema deve permitir que o usuário visualize a lista de tarefas cadastradas. |
-| RF8 | Filtrar Tarefas | O sistema deve permitir que o usuário filtre tarefas por categoria, status ou data. | 
-| RF9 | Visualizar Detalhes da Tarefa | O sistema deve permitir que o usuário visualize todas as informações de uma tarefa específica. |
-| RF10 | Marcar Tarefa como Concluída | O sistema deve permitir que o usuário altere o status da tarefa para concluída. |
-| RF11 | Atualização em Tempo Real | O sistema deve atualizar automaticamente a lista de tarefas após qualquer alteração (criação, edição ou exclusão). |
-| RF12 | Associação com Modo Foco | O sistema deve permitir vincular uma tarefa ao modo foco e registrar o tempo dedicado a ela. |
-| RF13 | Validação de Dados | O sistema deve validar os dados inseridos pelo usuário ao criar ou editar uma tarefa (ex: título obrigatório). |
-| RF14 | Persistência de Dados | O sistema deve armazenar todas as tarefas e categorias para acesso posterior. | 
-| RF15 | Configurar lembretes | Permite ao usuário definir datas e horários para lembretes de tarefas. | 
-| RF16 | Enviar notificações | Permite que o sistema envie notificações ao usuário com base nos lembretes configurados. |
-| RF17 | Visualizar Perfil | O sistema deve permitir que o usuário visualize suas informações de perfil. | 
-| RF18 | Alterar Dados do Perfil | O sistema deve permitir que o usuário edite seus dados pessoais, como nome, e-mail e outras informações cadastradas. | 
-| RF19 | Alterar Senha | O sistema deve permitir que o usuário altere sua senha mediante a validação da senha atual. | 
-| RF20 | Alterar Tema | O sistema deve permitir que o usuário altere o tema da aplicação (ex: claro, escuro ou personalizados). | 
-| RF21 | Persistência das Configurações | O sistema deve salvar automaticamente as alterações realizadas no perfil e preferências do usuário. |
-| RF22 | Validação de Dados | O sistema deve validar os dados inseridos pelo usuário ao atualizar o perfil (ex: formato de e-mail válido, senha segura). | 
-| RF23 | Segurança da Senha | O sistema deve garantir que a senha seja armazenada de forma segura (ex: criptografia). | 
-| RF24 | Iniciar Modo Foco | O sistema deve permitir que o usuário inicie o modo foco ao clicar na opção "Modo Foco" em uma tarefa. | 
-| RF25 | Inicializar Timer | O sistema deve iniciar automaticamente um temporizador ao ativar o modo foco para uma tarefa. | 
-| RF26 | Pausar Timer | O sistema deve permitir que o usuário pause o temporizador a qualquer momento durante o modo foco. | 
-| RF27 | Retomar Timer | O sistema deve permitir que o usuário retome o temporizador após pausá-lo. | 
-| RF28 | Adicionar Tempo | O sistema deve permitir que o usuário adicione mais tempo ao temporizador enquanto o modo foco estiver ativo ou pausado. | 
-| RF29 | Finalizar Modo Foco | O sistema deve permitir que o usuário finalize o modo foco manualmente a qualquer momento. | 
-| RF30 | Atualização em Tempo Real | O sistema deve atualizar o tempo restante do temporizador em tempo real na interface do usuário. |
-| RF31 | Vinculação com Tarefa | O sistema deve associar o modo foco à tarefa selecionada, registrando o tempo de foco dedicado a ela. | 
-| RF32 | Registro de Tempo | O sistema deve armazenar o tempo total gasto em modo foco para cada tarefa. | 
-| RF33 | Prevenção de Execuções Paralelas | O sistema deve impedir que mais de um modo foco esteja ativo simultaneamente. | 
-| RF34 | Estado Persistente | O sistema deve manter o estado do timer (rodando, pausado, finalizado) mesmo após atualização da tela ou reinício do app. | 
-| RF35 | Notificação de Término | O sistema deve notificar o usuário quando o tempo do temporizador chegar ao fim. | 
+| Código de Requisito | Requisito Funcional            | Descrição                                                                 |
+|--------------------|------------------------------|---------------------------------------------------------------------------|
+| RF01               | Cadastro de usuário          | Permitir que o usuário crie uma conta com e-mail e senha.                |
+| RF02               | Login de usuário             | Permitir que o usuário acesse sua conta com credenciais válidas.         |
+| RF03               | Criar tarefas                | Permitir ao usuário adicionar tarefas à sua rotina diária.               |
+| RF04               | Editar tarefas               | Permitir modificar informações de uma tarefa existente.                  |
+| RF05               | Excluir tarefas              | Permitir remover tarefas da rotina.                                      |
+| RF06               | Definir horários             | Permitir atribuir horário de início e fim para cada tarefa.              |
+| RF07               | Notificações                 | Enviar lembretes quando uma tarefa estiver próxima de iniciar.           |
+| RF08               | Temporizador visual          | Exibir contagem regressiva para a tarefa atual.                          |
+| RF09               | Visualização de agenda       | Mostrar as tarefas organizadas por dia/horário.                          |
+| RF10               | Marcar tarefa como concluída | Permitir ao usuário marcar tarefas finalizadas.                          |
+| RF11               | Personalização visual        | Permitir uso de cores ou ícones para diferenciar tarefas.                |
+| RF12               | Repetição de tarefas         | Permitir configurar tarefas recorrentes (diárias, semanais).             |
+| RF13               | Modo foco                    | Destacar apenas a tarefa atual para reduzir distrações.                  |
+| RF14               | Sincronização de dados       | Salvar e sincronizar dados do usuário (ex: na nuvem).                    |
+| RF15               | Histórico de tarefas         | Permitir visualizar tarefas já concluídas anteriormente.                 |
+
 
 ### 3.3.2 Requisitos Não Funcionais
 
