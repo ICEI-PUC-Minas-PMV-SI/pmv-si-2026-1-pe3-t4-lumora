@@ -48,8 +48,7 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 | RF11               | Personalização visual        | Permitir uso de cores ou ícones para diferenciar tarefas.                |
 | RF12               | Repetição de tarefas         | Permitir configurar tarefas recorrentes (diárias, semanais).             |
 | RF13               | Modo foco                    | Destacar apenas a tarefa atual para reduzir distrações.                  |
-| RF14               | Sincronização de dados       | Salvar e sincronizar dados do usuário (ex: na nuvem).                    |
-| RF15               | Histórico de tarefas         | Permitir visualizar tarefas já concluídas anteriormente.                 |
+| RF14               | Histórico de tarefas         | Permitir visualizar tarefas já concluídas anteriormente.                 |
 
 
 ### 3.3.2 Requisitos Não Funcionais
