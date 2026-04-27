@@ -16,7 +16,7 @@ Nesse contexto, busca-se desenvolver uma solução que contribua para tornar as 
 * Felipe Fernandes Jardim
 * Kamila Júlia do Espírito Santo
 * Luiza Trevenzoli Castor
-* Nicole Mikaely Amaral Santos
+* Nicole Mikaely Amaral Santos Silva
 
 ## Orientador
 
