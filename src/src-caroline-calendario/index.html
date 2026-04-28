@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Calendário Lumora</title>
+
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calendar-app">
+    <!-- selected day summary, mood input and expected tasks -->
+    <section class="day-summary">
+      <div>
+        <!-- Selected day title and full date -->
+        <p class="summary-label">📌 Resumo do dia</p>
+        <h1 id="summaryTitle">Hoje</h1>
+        <p id="summaryFullDate"></p>
+
+        <!-- Mood input -->
+        <div class="mood-box">
+          <label for="moodInput">Como você está se sentindo hoje?</label>
+          <input
+            type="text"
+            id="moodInput"
+            placeholder="Animada? Cansada? Focada? 😊"
+            maxlength="120"
+          />
+        </div>
+      </div>
+
+      <!-- Task summary for the selected day -->
+      <div class="summary-tasks">
+        <p class="summary-label">✅ Tarefas do dia</p>
+        <ul id="summaryTasks"></ul>
+      </div>
+    </section>
+
+    <!-- Weekly calendar section -->
+    <section class="calendar-card">
+      <header class="calendar-header">
+        <div>
+          <!-- week range -->
+          <p class="summary-label">📅 Calendário</p>
+          <h2 id="weekRange"></h2>
+        </div>
+
+        <!-- Calendar navigation -->
+        <div class="calendar-actions">
+          <button id="todayButton" type="button">Hoje</button>
+          <button id="tomorrowButton" type="button">Amanhã</button>
+          <button id="previousWeekButton" class="arrow-button" type="button">‹</button>
+          <button id="nextWeekButton" class="arrow-button" type="button">›</button>
+        </div>
+      </header>
+
+      <!-- Weekdays -->
+      <div class="calendar-weekdays">
+        <span>Dom</span>
+        <span>Seg</span>
+        <span>Ter</span>
+        <span>Qua</span>
+        <span>Qui</span>
+        <span>Sex</span>
+        <span>Sáb</span>
+      </div>
+
+      <!-- Calendar days in JS -->
+      <div id="calendarGrid" class="calendar-grid"></div>
+    </section>
+
+    <!-- Full day agenda with 24-hour -->
+    <section class="agenda-card">
+      <header class="agenda-header">
+        <div>
+          <p class="summary-label">🕒 Agenda do dia</p>
+          <h2 id="agendaTitle"></h2>
+        </div>
+      </header>
+
+      <!-- Hour rows are created dynamically in JS -->
+      <div id="agendaTimeline" class="agenda-timeline"></div>
+    </section>
+  </main>
+
+  <!-- Footer e minha assinatura do projeto -->
+  <footer class="app-footer">
+    <p>
+      Desenvolvido por <strong>Caroline Selvecki</strong> ·
+      <a href="mailto:carolineselvecki@gmail.com">carolineselvecki.qa@gmail.com</a>
+    </p>
+    <p class="footer-note">
+      Interface de calendário desenvolvida para fins de estudo e demonstração. Algumas funcionalidades podem ser simuladas.
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
