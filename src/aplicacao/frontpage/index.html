@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumora - Sua vida mais organizada</title>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <img src="../src/img/logo.png" alt="Logo Lumora" class="logo">
+            <h2>Lumora</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="sidebar-btn active" data-section="today">
+                <i data-lucide="notebook-pen"></i>
+                <span>início</span>
+            </button>
+            <button class="sidebar-btn" data-section="today">
+                <i data-lucide="calendar"></i>
+                <span>Calendário</span>
+            </button>
+            <button class="sidebar-btn" data-section="stats">
+                <i data-lucide="bar-chart-3"></i>
+                <span>Progresso</span>
+            </button>
+            <button class="sidebar-btn" data-section="achievements">
+                <i data-lucide="clock-plus"></i>
+                <span>Modo Foco</span>
+            </button>
+            <button class="sidebar-btn" data-section="user-round">
+                <i data-lucide="user-round"></i>
+                <span>Perfil</span>
+            </button>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+
+        <!-- Top Bar - Streak + Hearts (Superior Direita) -->
+        <div class="top-bar">
+            <div class="stats-group">
+                <div class="stat-item streak">
+                    <i data-lucide="flame"></i>
+                    <span id="streak-count">0</span>
+                </div>
+                <div class="stat-item trophy">
+                    <i data-lucide="star"></i>
+                    <span>5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header - Dia atual com navegação estilo stories -->
+        <div class="main-header">
+            <div class="day-box">
+                <div class="day-switcher" id="day-switcher">
+                    <button id="btn-prev-day" class="day-btn" aria-label="Dia anterior">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+
+                    <div class="day-label">
+                        <span id="selected-day-name">Hoje</span>
+                    </div>
+
+                    <button id="btn-next-day" class="day-btn" aria-label="Próximo dia">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="date" id="current-date"></div>
+            </div>
+
+            <h1>Progresso do Dia</h1>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <main>
+            <div id="task-list" class="timeline-content">
+                <!-- As tarefas serão inseridas aqui via JavaScript -->
+            </div>
+        </main>
+
+        <!-- Botão Flutuante Nova Tarefa -->
+        <div class="floating-action">
+            <button id="btn-open-modal" class="duo-button blue">
+                <i data-lucide="plus" style="width: 20px; height: 20px; margin-right: 8px;"></i>
+                NOVA TAREFA
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Modal Nova Tarefa -->
+    <div id="modal" class="modal-overlay">
+        <div id="modal-overlay-bg" style="position: absolute; inset: 0;"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>NOVA MISSÃO</h2>
+                <button id="btn-close-modal" style="background: none; border: none; font-size: 2rem; cursor: pointer; color: #999;">×</button>
+            </div>
+
+            <div class="form-body">
+                <div class="input-field">
+                    <label>O QUE FAZER?</label>
+                    <input id="task-input-title" type="text" placeholder="Ex: Beber água, Codar..." class="input-styles" autocomplete="off" />
+                </div>
+
+                <div class="dual-input">
+                    <div class="input-field">
+                        <label>QUE HORAS?</label>
+                        <input id="task-input-time" type="time" value="09:00" class="input-styles" />
+                    </div>
+                    <div class="input-field">
+                        <label>PERÍODO</label>
+                        <select id="task-input-category" class="input-styles">
+                            <option value="morning">Manhã</option>
+                            <option value="afternoon">Tarde</option>
+                            <option value="night">Noite</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button id="btn-cancel" class="duo-button white">CANCELAR</button>
+                    <button id="btn-save" class="duo-button green">ADICIONAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
