@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lumora Timer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<button class="theme-toggle">🌙</button>
+
+  <main class="timer-app">
+    <section class="timer-card" aria-labelledby="timer-title">
+
+      <h1 id="timer-title">Modo Foco</h1>
+
+      <div class="timer-container">
+
+        <svg class="progress-ring" viewBox="0 0 280 280">
+
+          <circle class="progress-background" cx="140" cy="140" r="120"></circle>
+
+          <circle class="progress" cx="140" cy="140" r="120"></circle>
+        </svg>
+
+        <div class="timer">
+
+          <div class="picker-wrapper">
+
+          <span class="time-unit minutes" tabindex="0">25</span>
+          <div class="picker minutes-picker"></div>
+        </div>
+
+          <span class="separator">:</span>
+
+          <div class="picker-wrapper">
+          <span class="time-unit seconds" tabindex="0">00</span>
+          <div class="picker seconds-picker"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+      <p class="finished-message" aria-live="polite">Tempo finalizado!</p>
+
+      <div class="buttons">
+        <button class="start">Iniciar</button>
+        <button class="pause">Pausar</button>
+        <button class="reset">Reiniciar</button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
