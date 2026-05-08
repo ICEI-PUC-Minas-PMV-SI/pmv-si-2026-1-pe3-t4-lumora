@@ -7,27 +7,29 @@
   --text-main: #4A3B4B;
   --white: #ffffff;
 
-  --bg-gradient-light:linear-gradient(
+  --bg-gradient-light: linear-gradient(
     135deg,
     var(--lavender-fog) 0%,
     #dfe7df 45%,
     var(--silt-green) 100%
   );
 
-  --bg-dark:linear-gradient(
+  --bg-dark: linear-gradient(
     135deg,
     #1f1c24 0%,
     #2a2433 50%,
     #1f2a25 100%
   );
 
-  --card-dark:rgba(35,35,42,0.75);
-  --text-dark:#f3eef7;
+  --card-dark: rgba(35, 35, 42, 0.75);
+  --text-dark: #f3eef7;
 }
 
 * {
   box-sizing: border-box;
 }
+
+/* Layout da página */
 
 body {
   margin: 0;
@@ -39,6 +41,8 @@ body {
   background: var(--bg-gradient-light);
   transition: background 0.3s ease;
 }
+
+/* Card Principal */
 
 .timer-card {
   width: 360px;
@@ -56,6 +60,8 @@ h1 {
   color: var(--partician-purple);
   font-size: 36px;
 }
+
+/* Área do Timer */
 
 .timer-container {
   position: relative;
@@ -80,6 +86,8 @@ h1 {
   stroke: rgba(122, 92, 123, 0.15);
 }
 
+/* Anel de progresso */
+
 .progress {
   stroke: var(--partician-purple);
   stroke-linecap: round;
@@ -88,6 +96,8 @@ h1 {
   transition: stroke-dashoffset 1s linear;
   filter: drop-shadow(0 0 6px rgba(122, 92, 123, 0.35));
 }
+
+/* Card do timer */
 
 .timer {
   position: absolute;
@@ -105,6 +115,8 @@ h1 {
 .separator {
   opacity: 0.7;
 }
+
+/* Seleção de minutos e segundos */
 
 .picker-wrapper {
   position: relative;
@@ -141,9 +153,9 @@ h1 {
   overflow-y: auto;
   padding: 8px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(14px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   z-index: 100;
 }
 
@@ -161,8 +173,10 @@ h1 {
 }
 
 .picker-option:hover {
-  background: rgba(122,92,123,0.08);
+  background: rgba(122, 92, 123, 0.08);
 }
+
+/* Mensagem de finalização do timer */
 
 .finished-message {
   display: none;
@@ -171,6 +185,8 @@ h1 {
   font-size: 18px;
   font-weight: bold;
 }
+
+/* Botões */
 
 .buttons {
   display: flex;
@@ -196,13 +212,13 @@ button:disabled {
   cursor: not-allowed;
 }
 
- button:focus-visible,
-  .time-unit:focus-visible,
-  .picker-option:focus-visible,
-  .theme-toggle:focus-visible {
-    outline: 3px solid rgba(122, 92, 123, 0.35);
-    outline-offset: 4px;
-  }
+button:focus-visible,
+.time-unit:focus-visible,
+.picker-option:focus-visible,
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(122, 92, 123, 0.35);
+  outline-offset: 4px;
+}
 
 .start {
   background: var(--english-ivy);
@@ -217,63 +233,67 @@ button:disabled {
   background: var(--partician-purple);
 }
 
+/* Botão de alterar tema */
+
 .theme-toggle {
-  position:fixed;
+  position: fixed;
   top: 24px;
-  right:24px;
-  width:48px;
-  height:48px;
-  border:none;
-  border-radius:50%;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size:20px;
-  cursor:pointer;
+  font-size: 20px;
+  cursor: pointer;
   z-index: 1000;
-  background:rgba(255,255,255,0.75);
-  backdrop-filter:blur(12px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition:
-  transform 0.2s ease,
-  background 0.3s ease;
+   transform 0.2s ease,
+   background 0.3s ease;
 }
 
 .theme-toggle:hover {
-  transform:scale(1.08);
+  transform: scale(1.08);
 }
 
+/* Tema escuro */
+
 body.dark {
-  background:var(--bg-dark);
+  background: var(--bg-dark);
 }
 
 body.dark .timer-card {
-  background:var(--card-dark);
-  border:1px solid rgba(255,255,255,0.08);
+  background: var(--card-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 body.dark h1,
 body.dark .timer,
 body.dark .separator,
 body.dark .time-unit {
-  color:var(--text-dark);
+  color: var(--text-dark);
 }
 
 body.dark .progress-background {
-  stroke:rgba(255,255,255,0.08);
+  stroke: rgba(255, 255, 255, 0.08);
 }
 
 body.dark .theme-toggle {
-  background:rgba(255,255,255,0.08);
-  color:white;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
 }
 
 body.dark .time-unit:hover {
-  background:rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 body.dark .picker {
-  background: rgba(35,35,42,0.96);
+  background: rgba(35, 35, 42, 0.96);
 }
 
 body.dark .picker-option {
@@ -281,8 +301,10 @@ body.dark .picker-option {
 }
 
 body.dark .picker-option:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
+
+/* Responsividade */
 
 @media (max-width: 480px) {
   .timer-card {

@@ -4,13 +4,15 @@ const secondsElement = document.querySelector('.seconds')
 const minutesPicker = document.querySelector('.minutes-picker')
 const secondsPicker = document.querySelector('.seconds-picker')
 
-const startButton =document.querySelector('.start')
-const pauseButton =document.querySelector('.pause')
-const resetButton =document.querySelector('.reset')
+const startButton = document.querySelector('.start')
+const pauseButton = document.querySelector('.pause')
+const resetButton = document.querySelector('.reset')
 
-const progress =document.querySelector('.progress')
-const finishedMessage =document.querySelector('.finished-message') 
+const progress = document.querySelector('.progress')
+const finishedMessage = document.querySelector('.finished-message')
 const themeToggle = document.querySelector('.theme-toggle')
+
+/* Variáveis principais */
 
 let time = 25 * 60
 let initialTime = time
@@ -19,6 +21,8 @@ let isRunning = false
 
 const totalProgress = 754
 
+/* Atualiza o timer na tela */
+
 function renderTimer() {
     const minutes = Math.floor(time / 60)
     const seconds = time % 60
@@ -26,9 +30,11 @@ function renderTimer() {
     minutesElement.textContent = String(minutes).padStart(2, '0')
     secondsElement.textContent = String(seconds).padStart(2, '0')
     
-    const progressValue =(time / initialTime) * totalProgress
+    const progressValue = (time / initialTime) * totalProgress
     progress.style.strokeDashoffset = -(totalProgress - progressValue)
 }
+
+/* Contagem */
 
 function updateTimer() {
     if (time <= 0) {
@@ -44,6 +50,8 @@ function updateTimer() {
     renderTimer()
 }
 
+/* Mensagem de finalização */
+
 function showFinishedMessage() {
     finishedMessage.style.display = 'block'
 }
@@ -51,6 +59,8 @@ function showFinishedMessage() {
 function hideFinishedMessage() {
     finishedMessage.style.display = 'none'
 }
+
+/* Criação das opções de minutos e segundos */
 
 function createPickerOptions() {
     for (let i = 0; i <= 60; i++) {
@@ -89,14 +99,16 @@ function createPickerOptions() {
     }
 }
 
+/* Abrir e fechar as seleções */
+
 minutesElement.addEventListener('click', function() {
-    if (isRunning) return   
+    if (isRunning) return
     secondsPicker.classList.remove('show')
     minutesPicker.classList.toggle('show')
 })
 
 secondsElement.addEventListener('click', function() {
-    if (isRunning) return   
+    if (isRunning) return
     minutesPicker.classList.remove('show')
     secondsPicker.classList.toggle('show')
 })
@@ -109,6 +121,8 @@ document.addEventListener('click', function(event) {
         secondsPicker.classList.remove('show')
     }   
 })
+
+/* Botões */
 
 startButton.addEventListener('click', function() {
     hideFinishedMessage()
@@ -145,6 +159,8 @@ resetButton.addEventListener('click', function() {
     startButton.textContent = 'Iniciar'
 })
 
+/* Alternar entre os temas */
+
 const savedTheme = localStorage.getItem('lumora-theme')
 
 if (savedTheme === 'dark') {
@@ -157,7 +173,7 @@ themeToggle.addEventListener('click', function() {
 
   const isDark = document.body.classList.contains('dark')
   themeToggle.textContent = isDark ? '☀️' : '🌙'
-  localStorage.setItem('lumora-theme',isDark ? 'dark' : 'light')
+  localStorage.setItem('lumora-theme', isDark ? 'dark' : 'light')
 })
 
 createPickerOptions()
