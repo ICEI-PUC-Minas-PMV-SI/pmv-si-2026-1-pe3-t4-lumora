@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumora — Apresentação</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="nav-logo" href="#hero" aria-label="Ir para o topo">Lumora</a>
+      <div class="nav-links" aria-label="Seções">
+        <a href="#sobre">Sobre</a>
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#equipe">Equipe</a>
+      </div>
+      <a class="nav-cta" href="../../src/aplicacao/frontpage/index.html">Ver o App</a>
+    </nav>
+
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <span class="hero-badge">Projeto Acadêmico · PUC Minas SI 2026</span>
+        <h1>Organize sua rotina.<br />No seu ritmo.</h1>
+        <p>
+          O Lumora foi feito para pessoas com TDAH que precisam de clareza, estrutura e leveza no
+          dia a dia — sem julgamento, sem pressão.
+        </p>
+        <a href="../../src/aplicacao/frontpage/index.html" class="btn-primary">Ver o App</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone-mockup placeholder-img">
+          <span>Screenshot<br />Home</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="about-inner">
+        <h2>Por que o Lumora existe?</h2>
+        <p>
+          Pessoas com TDAH enfrentam desafios reais com foco, gestão do tempo e organização de
+          tarefas. O Lumora é uma resposta a isso: um app de planejamento visual que apoia a rotina
+          sem sobrecarregar.
+        </p>
+        <p>
+          Desenvolvido como projeto da disciplina <strong>Design Centrado no Usuário</strong> no
+          curso de Sistemas de Informação da PUC Minas — 3º semestre, 2026.
+        </p>
+        <div class="about-pills" aria-label="Tags do projeto">
+          <span>TDAH</span><span>Foco Visual</span><span>Rotina</span><span>Acessibilidade</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="funcionalidades" class="features">
+      <h2>Tudo que você precisa para o seu dia</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="notebook-pen"></i></div>
+          <h3>Tarefas do Dia</h3>
+          <p>
+            Visualize e organize suas tarefas em uma timeline clara. Adicione, complete e acompanhe
+            o progresso do dia.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="calendar"></i></div>
+          <h3>Calendário</h3>
+          <p>Planeje seus compromissos com antecedência. Veja o que vem a seguir sem esquecer.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="clock-plus"></i></div>
+          <h3>Modo Foco</h3>
+          <p>Timer visual para se concentrar em uma tarefa por vez. Menos distração, mais presença.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
+          <h3>Progresso</h3>
+          <p>Acompanhe sua sequência de dias e veja sua evolução. Pequenas vitórias constroem consistência.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+      <h2>Veja o Lumora em ação</h2>
+      <p class="screenshots-sub">Screenshots reais em breve. Por enquanto, um preview da estrutura.</p>
+      <div class="screenshots-row">
+        <div class="screen-card">
+          <div class="screen-mockup placeholder-img"><span>Home<br />Tarefas</span></div>
+          <p>Tela Inicial</p>
+        </div>
+        <div class="screen-card featured">
+          <div class="screen-mockup placeholder-img"><span>Calendário</span></div>
+          <p>Calendário</p>
+        </div>
+        <div class="screen-card">
+          <div class="screen-mockup placeholder-img"><span>Modo<br />Foco</span></div>
+          <p>Modo Foco</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe" class="team">
+      <h2>Quem fez o Lumora</h2>
+      <div class="team-grid">
+        <div class="team-card"><div class="avatar">DA</div><p>Divino Armando</p></div>
+        <div class="team-card"><div class="avatar">CT</div><p>Caroline Teresa</p></div>
+        <div class="team-card"><div class="avatar">FF</div><p>Felipe Jardim</p></div>
+        <div class="team-card"><div class="avatar">KJ</div><p>Kamila Júlia</p></div>
+        <div class="team-card"><div class="avatar">LT</div><p>Luiza Trevenzoli</p></div>
+        <div class="team-card"><div class="avatar">NM</div><p>Nicole Mikaely</p></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p><strong>Lumora</strong> — Sistemas de Informação · PUC Minas · 2026</p>
+      <p>Disciplina: Design Centrado no Usuário · Orientador: Luiz Alberto Ferreira Gomes</p>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
