@@ -35,25 +35,25 @@ Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A
 ![Timer](/src/img/Tela-todo.png)
 
 
-# Tela de Timer 
+## Tela de Timer 
 
-## Objetivo da Tela
+### Objetivo da Tela
 A tela proporciona ao usuário uma forma visual e interativa de acompanhar períodos de concentração, auxiliando no gerenciamento do tempo durante atividades de estudo, trabalho ou produtividade. A interface foi desenvolvida para ser simples e intuitiva, com controles claros e acompanhamento contínuo do progresso da contagem do tempo.
 
-## Princípios Gestálticos 
+### Princípios Gestálticos 
 - **Proximidade:** O timer, o anel de progresso e os botões de controle estão agrupados em um card centralizado, deixando claro que pertencem ao mesmo conjunto funcional.
 - **Similaridade:** Os botões seguem o mesmo formato e tipografia, diferenciando apenas na cor para indicar a função de cada um, tornando as ações facilmente identificáveis.
 - **Continuidade:** O anel animado acompanha o avanço do tempo de forma fluida, reforçando a percepção do tempo em andamento.
 - **Fechamento:** Mesmo parcialmente preenchido, o anel é percebido como um círculo completo, permitindo a leitura do progresso de forma imediata e natural.
 - **Figura-Fundo:** O contraste entre o fundo degradê e o card central destaca os elementos interativos, facilitando a identificação das informações principais.
 
-## Regras de Ouro de Shneiderman
+### Regras de Ouro de Shneiderman
 - **Consistência:** Os elementos da interface seguem um mesmo padrão visual de cores, formatos e organização, reduzindo o esforço cognitivo do usuário.
 - **Feedback Informativo:** O anel de progresso, as mudanças nos botões e a mensagem ao final da contagem do tempo fornecem respostas visuais contínuas durante toda a utilização.
 - **Redução da Sobrecarga de Memória:** A interface apresenta apenas os elementos essenciais, evitando distrações e mantendo o foco do usuário na tarefa principal.
 - **Reversão de Ações:** Os botões Pausar e Reiniciar permitem que o usuário interrompa ou restaure o timer a qualquer momento, oferecendo controle e liberdade durante o uso.
 
-## Recomendações Ergonômicas
+### Recomendações Ergonômicas
 - **Carga de Trabalho:** Poucos elementos visuais e informações objetivas reduzem distrações e facilitam a concentração durante o uso.
 - **Condução:** A organização hierárquica dos elementos, título, anel e botões, direciona o olhar do usuário de forma natural, sem necessidade de instruções adicionais.
 - **Controle do Usuário:** O usuário possui liberdade para iniciar, pausar e reiniciar o timer conforme sua necessidade, permitindo maior flexibilidade durante os períodos de foco.
@@ -115,21 +115,21 @@ A tela proporciona ao usuário uma forma visual e interativa de acompanhar perí
 
 | Pergunta | Resultado |Observação |
 |---|---|---|
-| 1 |  OK | - |
-| 2 |  OK | - |
-| 3 |  OK | Campo desalinhado |
-| 4 |  OK | - |
-| 5 |  OK | - |
-| 6 |  OK | - |
-| 7 |  OK | Campo desalinhado |
-| 8 |  OK | - |
-| 9 |  OK | - |
-| 10 |  OK | - |
-| 11 |  OK | Campo desalinhado |
-| 12 |  OK | - |
-| 13 |  OK | - |
-| 14 |  OK | - |
-| 15 |  OK | Campo desalinhado |
+| 1 |  Sim | Consegui entender rapidamente o objetivo da tela. |
+| 2 |  Sim | Os botões ficaram bem organizados, especialmente pelas cores diferentes para funções distintas. |
+| 3 |  Sim | Os nomes utilizados estavam claros. |
+| 4 |  Sim | Foi fácil encontrar as funcionalidades. |
+| 5 |  Sim | O funcionamento do timer foi fácil de entender. |
+| 6 |  Sim | Os elementos clicáveis ficaram bem destacados.  |
+| 7 |  Não | Não percebi distrações visuais durante o uso. |
+| 8 |  Sim | Os textos ajudaram a entender as ações. |
+| 9 |  Não | Não tive dificuldade para visualizar os elementos. |
+| 10 |  Sim | As mensagens estavam claras e objetivas. |
+| 11 |  Não | Não encontrei termos difíceis ou confusos. |
+| 12 |  Sim | Consegui utilizar a interface sem ajuda. |
+| 13 |  - | Gostei da organização visual e da simplicidade da interface, além da animação indicando a passagem do tempo. |
+| 14 |  - | Adicionaria um alerta sonoro ao final do timer. |
+| 15 |  - | A experiência em geral foi boa, principalmente por ajudar a manter o foco.  |
 
 Nesta seção você deve apresentar os testes realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos na seção anterior. O objetivo é avaliar a usabilidade, a clareza das informações e a adequação do design às necessidades das personas definidas no projeto.
 
