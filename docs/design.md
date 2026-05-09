@@ -93,21 +93,21 @@ A tela proporciona ao usuário uma forma visual e interativa de acompanhar perí
 
 | Pergunta | Resultado |Observação |
 |---|---|---|
-| 1 |  OK | - |
-| 2 |  OK | - |
-| 3 |  OK | Campo desalinhado |
-| 4 |  OK | - |
-| 5 |  OK | - |
-| 6 |  OK | - |
-| 7 |  OK | Campo desalinhado |
-| 8 |  OK | - |
-| 9 |  OK | - |
-| 10 |  OK | - |
-| 11 |  OK | Campo desalinhado |
-| 12 |  OK | - |
-| 13 |  OK | - |
-| 14 |  OK | - |
-| 15 |  OK | Campo desalinhado |
+| 1 |  Sim | Ao acessar a página inicial consegui entender rapidamente que o objetivo do site é organizar tarefas e acompanhar o progresso diário de produtividade |
+| 2 |  Sim | O menu lateral e os botões estão posicionados de forma intuitiva e facilitam bastante a navegação entre as seções |
+| 3 |  Sim | Os nomes das seções como “Calendário”, “Progresso” e “Modo Foco” são claros e fazem sentido dentro da proposta da aplicação |
+| 4 |  Sim | Foi fácil localizar as principais funcionalidades e entender onde acessar cada área do sistema |
+| 5 |  Sim | A interface apresenta um fluxo simples e organizado, deixando claro como visualizar e adicionar tarefas |
+| 6 |  Sim | As cores, ícones e disposição dos elementos ajudam a identificar o que pode ser clicado e o que é apenas informativo |
+| 7 |  Não | Os elementos visuais estão equilibrados e não há excesso de informações chamando atenção desnecessariamente |
+| 8 |  Sim | Os textos e rótulos utilizados são objetivos e ajudam a entender rapidamente as ações disponíveis |
+| 9 |  - | O único ponto um pouco difícil foi perceber alguns textos menores e ícones com pouco contraste em relação ao fundo claro da interface |
+| 10 |  Sim | As instruções e textos apresentados são simples, claros e fáceis de compreender |
+| 11 |  Não | Não encontrei termos técnicos confusos durante a navegação |
+| 12 |  Sim | Consegui utilizar o protótipo sem precisar de ajuda externa e me senti confortável durante a interação |
+| 13 |  - | Gostei principalmente do design minimalista, da organização da tela e da sensação de limpeza visual da interface |
+| 14 |  - | Melhoraria um pouco o contraste de alguns textos e adicionaria mais feedback visual nas ações, como animações ou confirmações ao criar e excluir tarefas. Senti falta de criar tarefas diarias, semanais ou mensais |
+| 15 |  - | No geral, o protótipo transmite uma experiência agradável e organizada, sendo coerente com a proposta de produtividade e gerenciamento de tarefas |
 ### Tela: Timer
 
 | Pergunta | Resultado |Observação |
