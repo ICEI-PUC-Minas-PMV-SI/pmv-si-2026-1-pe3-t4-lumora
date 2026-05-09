@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumora - Recuperar Senha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="left-panel">
+      <div class="brand">
+        <img src="../src/img/logo.png" alt="Logo Lumora" class="logo">
+        <span class="brand-name">Lumora</span>
+      </div>
+      <div class="illustration">
+        <div class="emoji-illustration">🔑</div>
+        <p class="illustration-text">Não se preocupe!<br>Vamos te ajudar a recuperar o acesso.</p>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div class="form-wrapper">
+
+        <h1 class="form-title">Recuperar senha</h1>
+        <p class="form-subtitle">Digite seu e-mail e enviaremos um link para redefinir sua senha.</p>
+
+        <div class="form-group">
+          <label for="email">E-MAIL</label>
+          <input type="email" id="email" placeholder="ex: lumora@email.com" />
+        </div>
+
+        <p class="error-msg" id="error-msg"></p>
+        <p class="success-msg" id="success-msg"></p>
+
+        <button class="btn-primary" id="btn-recuperar">Enviar link de recuperação</button>
+
+        <div class="form-links">
+          <a href="index.html">Voltar para o login</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="recuperar-senha.js"></script>
+</body>
+</html>
