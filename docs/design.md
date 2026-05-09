@@ -37,6 +37,56 @@ A tela proporciona ao usuário uma forma visual e interativa de acompanhar perí
 
 
 ## 4.4 Testes com Protótipos
+**1.** Ao acessar a página inicial, você conseguiu entender rapidamente qual é o propósito ou objetivo principal do site?
+
+**2.** O menu e os botões estavam posicionados de forma intuitiva?	
+
+**3.** A nomenclatura das seções (menus, botões, links) fez sentido para você?
+
+**4.** Você conseguiu encontrar facilmente as seções ou informações que procurava no protótipo?
+
+**5.** As etapas apresentadas para realizar as tarefas estavam claras e seguiam uma lógica compreensível?
+
+**6.** Os elementos visuais (cores, ícones e disposição dos botões) facilitaram a identificação do que era clicável e do que era apenas informativo?
+
+**7.** Há elementos visuais que chamam atenção indevidamente ou confundem?
+
+**8.** Os textos e rótulos utilizados nas páginas estavam claros e ajudaram a entender as ações que você podia realizar?
+
+**9.** Houve algum elemento difícil de visualizar, clicar ou compreender durante a navegação (por tamanho, contraste ou formato)?
+
+**10.** O texto das instruções, rótulos e mensagens é claro e compreensível?
+
+**11.** Encontrou termos técnicos ou expressões confusas?
+
+**12.** Você se sentiu confiante e satisfeito ao interagir com o protótipo, sem necessidade de ajuda externa?
+
+**13.** O que você mais gostou na interface?
+
+**14.** O que você mudaria ou melhoraria?
+
+**15.** Tem algo mais que gostaria de comentar sobre os protótipos?
+
+# Tela: Timer
+
+| Pergunta | Resultado |Observação |
+|---|---|---|
+| 1 |  OK | - |
+| 2 |  OK | - |
+| 3 |  OK | Campo desalinhado |
+| 4 |  OK | - |
+| 5 |  OK | - |
+| 6 |  OK | - |
+| 7 |  OK | Campo desalinhado |
+| 8 |  OK | - |
+| 9 |  OK | - |
+| 10 |  OK | - |
+| 11 |  OK | Campo desalinhado |
+| 12 |  OK | - |
+| 13 |  OK | - |
+| 14 |  OK | - |
+| 15 |  OK | Campo desalinhado |
+
 Nesta seção você deve apresentar os testes realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos na seção anterior. O objetivo é avaliar a usabilidade, a clareza das informações e a adequação do design às necessidades das personas definidas no projeto.
 
 Cada integrante do grupo deverá aplicar o teste com um usuário distinto, preferencialmente alinhado ao perfil das personas criadas. Devem ser definidas previamente as tarefas que o usuário deverá executar no protótipo (por exemplo: realizar um cadastro, buscar um produto, concluir uma compra).
