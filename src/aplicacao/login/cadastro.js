@@ -34,6 +34,7 @@ function cadastrar() {
 
   errorMsg.textContent = "";
   localStorage.setItem("usuarioLogado", email);
+  localStorage.setItem("lumora-profile-name", nome);
   window.location.href = "../frontpage/index.html";
 }
 
