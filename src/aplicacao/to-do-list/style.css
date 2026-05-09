@@ -371,6 +371,20 @@ main {
   color: #d32f2f;
 }
 
+.edit-btn {
+  background: none;
+  border: none;
+  color: green;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.edit-btn:hover {
+  background: rgb(190, 241, 190);
+  color: green;
+}
+
 /* ====================== BOTÃO FLUTUANTE ====================== */
 .floating-action {
   position: fixed;

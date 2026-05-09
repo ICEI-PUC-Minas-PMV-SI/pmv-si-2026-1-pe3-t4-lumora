@@ -240,10 +240,15 @@ function renderTasks() {
                 <div class="task-time">${task.time}</div>
                 <div class="task-title">${task.title}</div>
             </div>
-
+			
+			<button class="edit-btn" data-id="${task.id}" title="Editar">
+                <i data-lucide="pencil-line" style="width: 20px; height: 20px;"></i>
+            </button>
+			
             <button class="delete-btn" data-id="${task.id}" title="Excluir">
                 <i data-lucide="trash-2" style="width: 20px; height: 20px;"></i>
             </button>
+
         `;
 
         taskEl.querySelector('.task-node').addEventListener('click', () => toggleTask(task.id));
