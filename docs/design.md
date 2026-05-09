@@ -9,6 +9,29 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 ## 4.3 Protótipos das Interfaces
 Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A fidelidade do protótipo refere-se ao nível de detalhes e funcionalidades incorporadas a ele. Assim, um protótipo de alta fidelidade é uma representação interativa do produto, baseada no computador ou em dispositivos móveis. Esse protótipo já apresenta maior semelhança com o design final em termos de detalhes e funcionalidades. No desenvolvimento dos protótipos, devem ser considerados os princípios gestálticos, as recomendações ergonômicas e as regras de design (como as 8 regras de ouro). É importante descrever no texto do relatório como os princípios gestálticos e as regras de ouro foram seguidas no projeto das interfaces. Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte.
 
+## Tela de To-Do List
+
+### Objetivo da Tela
+
+### Princípios Gestálticos
+- **Proximidade: ** Os elementos relacionados estão agrupados visualmente de forma adequada. O card da tarefa reúne horário, título e ação de exclusão, facilitando a compreensão do usuário sobre a relação entre essas informações.
+- **Similaridade:** Os itens do menu lateral possuem padronização de ícones, tipografia e espaçamento, permitindo rápida identificação da navegação. Os cards seguem o mesmo estilo visual, reforçando consistência.
+- **Continuidade:** O alinhamento vertical dos componentes principais conduz naturalmente o olhar do usuário do calendário até as tarefas e posteriormente para o botão de criação de nova tarefa.
+- **Fechamento:** Os cards e containers possuem bordas arredondadas e delimitações claras, permitindo que o usuário identifique facilmente cada seção da interface mesmo sem contornos muito fortes.
+- **Figura-Fundo:** A aplicação utiliza um fundo claro e elementos brancos nos cards e containers, criando contraste suficiente para destacar informações importantes como tarefas e botões de ação.
+
+### Regras de Ouro de Shneiderman
+- **Consistência:** A interface mantém padrão visual nos menus, botões, ícones e tipografia, tornando a navegação mais intuitiva e previsível.
+- **Feedback Informativo:** O menu ativo possui destaque visual e os botões apresentam diferenciação visual adequada, ajudando o usuário a identificar ações disponíveis.
+- **Redução da Sobrecarga de Memória:** A navegação simples e objetiva reduz a necessidade de o usuário memorizar comandos ou caminhos complexos dentro da aplicação.
+- **Reversão de Ações:** A exclusão de tarefas está disponível de forma rápida através do ícone de lixeira. Como melhoria, recomenda-se adicionar confirmação ou opção de desfazer exclusão.
+
+### Recomendações Ergonômicas
+- **Carga de Trabalho:** A interface apresenta design minimalista e poucos elementos simultâneos na tela, reduzindo esforço cognitivo e distrações.
+- **Condução:** Os componentes estão organizados de maneira clara, permitindo que o usuário compreenda facilmente o fluxo principal da aplicação.
+- **Controle do Usuário:** O usuário possui liberdade para navegar entre as seções e gerenciar suas tarefas de forma simples e direta.
+- **Consistência:** Há padronização visual entre menus, cards, botões e cores, contribuindo para melhor aprendizado e usabilidade da interface.
+
 # Tela de Timer 
 
 ## Objetivo da Tela
