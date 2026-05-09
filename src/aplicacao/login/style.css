@@ -91,6 +91,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 60px 40px;
+  min-height: 100vh;
 }
 
 .form-wrapper {
@@ -106,6 +107,7 @@ body {
   font-weight: 800;
   color: var(--text-main);
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 
 .divider {
@@ -201,4 +203,30 @@ body {
 
 .form-links a:hover {
   color: var(--partician-purple);
+}
+
+.btn-google {
+  width: 100%;
+  padding: 16px;
+  background: var(--white);
+  color: var(--gray-dark);
+  border: 2px solid var(--gray-medium);
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-google:hover {
+  border-color: var(--partician-purple);
+}
+
+.google-icon {
+  width: 22px;
+  height: 22px;
 }

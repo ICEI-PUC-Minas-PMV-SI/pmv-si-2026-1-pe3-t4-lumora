@@ -10,34 +10,32 @@
 </head>
 <body>
 
-  <!-- CONTAINER PRINCIPAL: divide a tela em 2 colunas -->
   <div class="container">
 
-    <!-- COLUNA ESQUERDA: ilustração + texto -->
     <div class="left-panel">
       <div class="brand">
         <img src="../src/img/logo.png" alt="Logo Lumora" class="logo">
         <span class="brand-name">Lumora</span>
       </div>
       <div class="illustration">
-        <!-- Emoji como ilustração enquanto não temos imagem -->
         <div class="emoji-illustration">🌿</div>
         <p class="illustration-text">Bem-vindo de volta!<br>Pronto para organizar seu dia?</p>
       </div>
     </div>
-
-    <!-- COLUNA DIREITA: formulário -->
     <div class="right-panel">
       <div class="form-wrapper">
 
-        <h1 class="form-title">Entrar no Lumora</h1>
+        <h1 class="form-title">Organize. Foque. Conquiste</h1>
 
-        <!-- DIVISOR -->
+        <button class="btn-google" id="btn-google">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="google-icon">
+            Entrar com Google
+        </button>
+
         <div class="divider">
           <span>entre com e-mail</span>
         </div>
 
-        <!-- FORMULÁRIO DE LOGIN -->
         <div class="form-group">
           <label for="email">E-MAIL</label>
           <input type="email" id="email" placeholder="ex: lumora@email.com" />
@@ -48,13 +46,10 @@
           <input type="password" id="password" placeholder="Sua senha" />
         </div>
 
-        <!-- MENSAGEM DE ERRO (fica escondida até dar erro) -->
         <p class="error-msg" id="error-msg"></p>
 
-        <!-- BOTÃO PRINCIPAL -->
         <button class="btn-primary" id="btn-login">Entrar</button>
 
-        <!-- LINKS ABAIXO DO BOTÃO -->
         <div class="form-links">
           <a href="#">Esqueci minha senha</a>
           <a href="cadastro.html">Criar nova conta</a>
