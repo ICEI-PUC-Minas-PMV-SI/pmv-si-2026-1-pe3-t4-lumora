@@ -9,6 +9,33 @@ Mapa da Empatia é um material utilizado para conhecer melhor o seu cliente. A p
 ## 4.3 Protótipos das Interfaces
 Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A fidelidade do protótipo refere-se ao nível de detalhes e funcionalidades incorporadas a ele. Assim, um protótipo de alta fidelidade é uma representação interativa do produto, baseada no computador ou em dispositivos móveis. Esse protótipo já apresenta maior semelhança com o design final em termos de detalhes e funcionalidades. No desenvolvimento dos protótipos, devem ser considerados os princípios gestálticos, as recomendações ergonômicas e as regras de design (como as 8 regras de ouro). É importante descrever no texto do relatório como os princípios gestálticos e as regras de ouro foram seguidas no projeto das interfaces. Nesta etapa deve-se dar uma ênfase na implementação do software de modo que possam ser realizados os testes com usuários na etapa seguinte.
 
+# Tela de Timer 
+
+## Objetivo da Tela
+A tela proporciona ao usuário uma forma visual e interativa de acompanhar períodos de concentração, auxiliando no gerenciamento do tempo durante atividades de estudo, trabalho ou produtividade. A interface foi desenvolvida para ser simples e intuitiva, com controles claros e acompanhamento contínuo do progresso da contagem do tempo.
+
+## Princípios Gestálticos 
+- **Proximidade:** O timer, o anel de progresso e os botões de controle estão agrupados em um card centralizado, deixando claro que pertencem ao mesmo conjunto funcional.
+- **Similaridade:** Os botões seguem o mesmo formato e tipografia, diferenciando apenas na cor para indicar a função de cada um, tornando as ações facilmente identificáveis.
+- **Continuidade:** O anel animado acompanha o avanço do tempo de forma fluida, reforçando a percepção do tempo em andamento.
+- **Fechamento:** Mesmo parcialmente preenchido, o anel é percebido como um círculo completo, permitindo a leitura do progresso de forma imediata e natural.
+- **Figura-Fundo:** O contraste entre o fundo degradê e o card central destaca os elementos interativos, facilitando a identificação das informações principais.
+
+## Regras de Ouro de Shneiderman
+- **Consistência:** Os elementos da interface seguem um mesmo padrão visual de cores, formatos e organização, reduzindo o esforço cognitivo do usuário.
+- **Feedback Informativo:** O anel de progresso, as mudanças nos botões e a mensagem ao final da contagem do tempo fornecem respostas visuais contínuas durante toda a utilização.
+- **Redução da Sobrecarga de Memória:** A interface apresenta apenas os elementos essenciais, evitando distrações e mantendo o foco do usuário na tarefa principal.
+- **Reversão de Ações:** Os botões Pausar e Reiniciar permitem que o usuário interrompa ou restaure o timer a qualquer momento, oferecendo controle e liberdade durante o uso.
+
+## Recomendações Ergonômicas
+- **Carga de Trabalho:** Poucos elementos visuais e informações objetivas reduzem distrações e facilitam a concentração durante o uso.
+- **Condução:** A organização hierárquica dos elementos, título, anel e botões, direciona o olhar do usuário de forma natural, sem necessidade de instruções adicionais.
+- **Controle do Usuário:** O usuário possui liberdade para iniciar, pausar e reiniciar o timer conforme sua necessidade, permitindo maior flexibilidade durante os períodos de foco.
+- **Consistência:** Os estados de interação dos botões e elementos seguem um padrão uniforme, tornando a navegação previsível e intuitiva.
+
+![Timer](/src/img/Tela-timer.jpeg)
+
+
 ## 4.4 Testes com Protótipos
 Nesta seção você deve apresentar os testes realizados com usuários utilizando os protótipos de alta fidelidade desenvolvidos na seção anterior. O objetivo é avaliar a usabilidade, a clareza das informações e a adequação do design às necessidades das personas definidas no projeto.
 

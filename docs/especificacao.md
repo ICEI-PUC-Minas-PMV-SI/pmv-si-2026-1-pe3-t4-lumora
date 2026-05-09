@@ -47,7 +47,7 @@ Seu escopo é limitado às funções essenciais de gestão de tarefas, priorizan
 | RF10               | Marcar tarefa como concluída | Permitir ao usuário marcar tarefas finalizadas.                          |
 | RF11               | Personalização visual        | Permitir uso de cores ou ícones para diferenciar tarefas.                |
 | RF12               | Repetição de tarefas         | Permitir configurar tarefas recorrentes (diárias, semanais).             |
-| RF13               | Modo foco                    | Destacar apenas a tarefa atual para reduzir distrações.                  |
+| RF13               | Modo foco                    | Auxiliar o usuário na concentração por meio de um timer interativo.      |
 | RF14               | Histórico de tarefas         | Permitir visualizar tarefas já concluídas anteriormente.                 |
 
 

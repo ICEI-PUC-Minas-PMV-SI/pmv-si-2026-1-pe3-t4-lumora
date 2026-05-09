@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  --partician-purple: #7A5C7B;
+  --sheer-lilac: #C3A6D1;
+  --lavender-fog: #EAE6F7;
+  --silt-green: #B7CBB6;
+  --english-ivy: #5E7D5A;
+  --text-main: #4A3B4B;
+  --white: #ffffff;
+  --gray-light: #f7f7f7;
+  --gray-medium: #e5e5e5;
+  --gray-dark: #4b4b4b;
+  --text-muted: #afafaf;
+  --color-red: #ff4b4b;
+  --bg-gradient: linear-gradient(135deg, var(--lavender-fog) 0%, #dfe7df 45%, var(--silt-green) 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  background: transparent;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand .logo {
+  width: 90px;
+  height: 105px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--partician-purple);
+}
+
+.illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+
+.emoji-illustration {
+  font-size: 5rem;
+}
+
+.illustration-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.5;
+  max-width: 320px;
+}
+
+.right-panel {
+  flex: 1;
+  background: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  min-height: 100vh;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gray-medium);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 16px 18px;
+  border: 2px solid var(--gray-medium);
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: var(--white);
+  color: var(--gray-dark);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--partician-purple);
+}
+
+.error-msg {
+  color: var(--color-red);
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 18px;
+  background: var(--partician-purple);
+  color: var(--white);
+  border: none;
+  border-bottom: 5px solid var(--sheer-lilac);
+  border-radius: 9999px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+}
+
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.form-links a {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.form-links a:hover {
+  color: var(--partician-purple);
+}
+
+.btn-google {
+  width: 100%;
+  padding: 16px;
+  background: var(--white);
+  color: var(--gray-dark);
+  border: 2px solid var(--gray-medium);
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-google:hover {
+  border-color: var(--partician-purple);
+}
+
+.google-icon {
+  width: 22px;
+  height: 22px;
+}
+.form-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: -10px;
+}
+
+.success-msg {
+  color: var(--english-ivy);
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-height: 20px;
+}
