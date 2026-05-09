@@ -12,9 +12,10 @@ Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A
 ## Tela de To-Do List
 
 ### Objetivo da Tela
+A tela inicial tem como objetivo centralizar o gerenciamento das tarefas diárias do usuário, permitindo visualizar compromissos, acompanhar o progresso do dia e acessar rapidamente as principais funcionalidades da aplicação de forma simples e organizada.
 
 ### Princípios Gestálticos
-- **Proximidade: ** Os elementos relacionados estão agrupados visualmente de forma adequada. O card da tarefa reúne horário, título e ação de exclusão, facilitando a compreensão do usuário sobre a relação entre essas informações.
+- **Proximidade:** Os elementos relacionados estão agrupados visualmente de forma adequada. O card da tarefa reúne horário, título e ação de exclusão, facilitando a compreensão do usuário sobre a relação entre essas informações.
 - **Similaridade:** Os itens do menu lateral possuem padronização de ícones, tipografia e espaçamento, permitindo rápida identificação da navegação. Os cards seguem o mesmo estilo visual, reforçando consistência.
 - **Continuidade:** O alinhamento vertical dos componentes principais conduz naturalmente o olhar do usuário do calendário até as tarefas e posteriormente para o botão de criação de nova tarefa.
 - **Fechamento:** Os cards e containers possuem bordas arredondadas e delimitações claras, permitindo que o usuário identifique facilmente cada seção da interface mesmo sem contornos muito fortes.
