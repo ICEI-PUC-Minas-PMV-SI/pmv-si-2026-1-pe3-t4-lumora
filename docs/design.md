@@ -66,8 +66,26 @@ A tela proporciona ao usuário uma forma visual e interativa de acompanhar perí
 **14.** O que você mudaria ou melhoraria?
 
 **15.** Tem algo mais que gostaria de comentar sobre os protótipos?
+### Tela: To-Do list
 
-# Tela: Timer
+| Pergunta | Resultado |Observação |
+|---|---|---|
+| 1 |  OK | - |
+| 2 |  OK | - |
+| 3 |  OK | Campo desalinhado |
+| 4 |  OK | - |
+| 5 |  OK | - |
+| 6 |  OK | - |
+| 7 |  OK | Campo desalinhado |
+| 8 |  OK | - |
+| 9 |  OK | - |
+| 10 |  OK | - |
+| 11 |  OK | Campo desalinhado |
+| 12 |  OK | - |
+| 13 |  OK | - |
+| 14 |  OK | - |
+| 15 |  OK | Campo desalinhado |
+### Tela: Timer
 
 | Pergunta | Resultado |Observação |
 |---|---|---|
