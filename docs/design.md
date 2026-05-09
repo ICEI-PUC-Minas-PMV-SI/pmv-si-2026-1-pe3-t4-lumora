@@ -32,6 +32,9 @@ Apresente nesta seção os protótipos de alta fidelidade do sistema proposto. A
 - **Controle do Usuário:** O usuário possui liberdade para navegar entre as seções e gerenciar suas tarefas de forma simples e direta.
 - **Consistência:** Há padronização visual entre menus, cards, botões e cores, contribuindo para melhor aprendizado e usabilidade da interface.
 
+![Timer](/src/img/Tela-todo.png)
+
+
 # Tela de Timer 
 
 ## Objetivo da Tela
