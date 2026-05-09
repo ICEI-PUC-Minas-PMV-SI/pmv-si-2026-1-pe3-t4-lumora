@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumora - Perfil</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+    </button>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../src/img/logo.png" alt="Logo Lumora" class="logo">
+            <h2>Lumora</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="sidebar-btn" onclick="window.location.href='../frontpage/index.html'" type="button">
+                <i data-lucide="notebook-pen"></i>
+                <span>início</span>
+            </button>
+            <button class="sidebar-btn" type="button">
+                <i data-lucide="calendar"></i>
+                <span>Calendário</span>
+            </button>
+            <button class="sidebar-btn" type="button">
+                <i data-lucide="bar-chart-3"></i>
+                <span>Progresso</span>
+            </button>
+            <button class="sidebar-btn" type="button">
+                <i data-lucide="clock-plus"></i>
+                <span>Modo Foco</span>
+            </button>
+            <button class="sidebar-btn active" type="button">
+                <i data-lucide="user-round"></i>
+                <span>Perfil</span>
+            </button>
+        </nav>
+    </aside>
+
+    <main class="profile-main">
+        <section class="profile-top">
+            <div class="profile-identity">
+                <div class="profile-photo-wrapper">
+                    <input id="profile-photo-input" type="file" accept="image/*" hidden>
+                    <div class="profile-photo-box" id="profile-photo-box">
+                        <img id="profile-photo-preview" alt="Foto de perfil">
+                    </div>
+                    <button id="btn-edit-photo" class="edit-icon-btn" type="button" aria-label="Trocar foto">
+                        <i data-lucide="pencil"></i>
+                    </button>
+                </div>
+
+                <div class="profile-name-row">
+                    <h1 id="profile-name">Seu nome</h1>
+                    <button id="btn-edit-name" class="edit-icon-btn" type="button" aria-label="Alterar nome">
+                        <i data-lucide="pencil"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="profile-mini-stats">
+                <article class="mini-stat-card">
+                    <div class="mini-stat-icon streak">
+                        <i data-lucide="flame"></i>
+                    </div>
+                    <div class="mini-stat-text">
+                        <strong id="mini-streak-count">0</strong>
+                        <span>Sequência diária</span>
+                    </div>
+                </article>
+
+                <article class="mini-stat-card">
+                    <div class="mini-stat-icon trophy">
+                        <i data-lucide="star"></i>
+                    </div>
+                    <div class="mini-stat-text">
+                        <strong id="mini-trophy-count">0</strong>
+                        <span>Pontos</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="profile-achievements">
+            <article class="achievement-card">
+                <div class="achievement-icon">
+                    <img src="../src/img/lenda.png" alt="Ícone Lenda da Consistência" class="achievement-icon-image">
+                </div>
+                <div class="achievement-body">
+                    <div class="achievement-title-row">
+                        <h2>Lenda da Consistência</h2>
+                        <strong id="streak-goal-text">0/30</strong>
+                    </div>
+                    <div class="achievement-progress-track">
+                        <div id="streak-goal-bar" class="achievement-progress-fill"></div>
+                    </div>
+                    <p>Complete uma sequência diária de 30 dias.</p>
+                </div>
+            </article>
+
+            <article class="achievement-card">
+                <div class="achievement-icon">
+                    <img src="../src/img/pontuacao.png" alt="Ícone Pontuação Suprema" class="achievement-icon-image">
+                </div>
+                <div class="achievement-body">
+                    <div class="achievement-title-row">
+                        <h2>Pontuação Suprema</h2>
+                        <strong id="trophy-goal-text">0/100</strong>
+                    </div>
+                    <div class="achievement-progress-track">
+                        <div id="trophy-goal-bar" class="achievement-progress-fill"></div>
+                    </div>
+                    <p>Conquiste 100 pontos.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
