@@ -70,6 +70,34 @@ A tela proporciona ao usuário uma forma visual e interativa de acompanhar perí
 ![Timer](/src/img/Tela-timer.jpeg)
 
 
+## Tela de Perfil
+
+### Objetivo da Tela
+A tela de perfil tem como objetivo permitir que o usuário visualize suas informações pessoais, acompanhe seu desempenho dentro da aplicação e monitore sua evolução por meio de métricas de consistência e pontuação. A interface centraliza dados relevantes de progresso e incentiva a continuidade no uso do aplicativo através de elementos visuais motivacionais.
+
+### Princípios Gestálticos
+- **Proximidade:** As informações relacionadas estão agrupadas em blocos visuais bem definidos. A foto de perfil e nome aparecem juntos, enquanto sequência diária e pontuação estão organizadas em cards separados, facilitando a leitura e compreensão rápida.
+- **Similaridade:** Os elementos de progresso utilizam o mesmo padrão visual, com cards brancos, bordas arredondadas, barras de progresso e tipografia padronizada. O menu lateral também mantém consistência entre ícones, textos e espaçamentos.
+- **Continuidade:** A disposição vertical da interface conduz naturalmente o olhar do usuário da imagem de perfil para o nome e, em seguida, para as conquistas e barras de progresso, criando fluxo visual intuitivo.
+- **Fechamento:** Os containers possuem delimitações claras através de formas arredondadas e contraste suave, permitindo ao usuário identificar facilmente cada área funcional da tela.
+- **Figura-Fundo:** O fundo em tom claro e suave contrasta com cards brancos e elementos coloridos, destacando informações importantes como sequência diária, pontos e progresso das conquistas.
+  
+### Regras de Ouro de Shneiderman
+- **Consistência:** A interface mantém padronização visual em menus, cards, ícones, cores e tipografia, tornando a navegação previsível e intuitiva.
+- **Feedback Informativo:** O item ativo no menu lateral recebe destaque visual, permitindo ao usuário identificar rapidamente sua localização atual dentro da aplicação. As barras de progresso também fornecem retorno imediato sobre evolução.
+- **Redução da Sobrecarga de Memória:** As informações essenciais são apresentadas de forma clara e resumida, evitando excesso de dados e reduzindo esforço cognitivo, especialmente importante para usuários com TDAH.
+- **Controle do Usuário:** O usuário pode editar foto e nome através dos ícones de edição, garantindo autonomia para personalizar suas informações.
+- **Prevenção de Erros:** Os botões de edição estão isolados e visualmente identificáveis, reduzindo chances de ações incorretas ou cliques acidentais.
+
+### Recomendações Ergonômicas
+- **Carga de Trabalho:** A interface apresenta poucos elementos simultâneos e organização limpa, reduzindo distrações e facilitando foco nas informações principais.
+- **Condução:** O layout hierárquico organiza primeiro identificação pessoal, depois métricas rápidas e por fim conquistas detalhadas, facilitando entendimento do fluxo.
+- **Controle do Usuário:** A navegação lateral permite acesso rápido às demais funcionalidades da aplicação, oferecendo liberdade de movimentação.
+- **Compatibilidade:** O uso de elementos gamificados, como sequência diária, pontuação e medalhas de conquista, está alinhado ao objetivo do aplicativo de estimular organização e motivação contínua em pessoas com TDAH.
+
+  ![Perfil](/src/img/Tela-Perfil.png)
+
+
 ## 4.4 Testes com Protótipos
 **1.** Ao acessar a página inicial, você conseguiu entender rapidamente qual é o propósito ou objetivo principal do site?
 
