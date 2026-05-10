@@ -16,21 +16,44 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="nav">
       <a class="nav-logo" href="#hero" aria-label="Ir para o topo">Lumora</a>
-      <div class="nav-links" aria-label="Seções">
+      <div class="nav-links" id="nav-links" aria-label="Seções">
         <a href="#sobre">Sobre</a>
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#equipe">Equipe</a>
+        <a href="../../src/aplicacao/frontpage/index.html">Ver o App</a>
       </div>
       <a class="nav-cta" href="../../src/aplicacao/frontpage/index.html">Ver o App</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <section id="hero" class="hero">
+      <div
+        class="hero-blob"
+        style="width: 420px; height: 420px; background: rgba(195, 166, 209, 0.32); top: -140px; right: 60px"
+        aria-hidden="true"
+      ></div>
+      <div
+        class="hero-blob"
+        style="
+          width: 320px;
+          height: 320px;
+          background: rgba(183, 203, 182, 0.55);
+          bottom: -120px;
+          right: 240px;
+          animation-delay: -4s;
+        "
+        aria-hidden="true"
+      ></div>
       <div class="hero-content">
         <span class="hero-badge">Projeto Acadêmico · PUC Minas SI 2026</span>
         <h1>Organize sua rotina.<br />No seu ritmo.</h1>
@@ -48,6 +71,17 @@
     </section>
 
     <section id="sobre" class="about">
+      <div class="about-chevron" aria-hidden="true">
+        <svg width="24" height="14" viewBox="0 0 24 14" fill="none">
+          <path
+            d="M2 2L12 12L22 2"
+            stroke="#7a5c7b"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
       <div class="about-inner">
         <h2>Por que o Lumora existe?</h2>
         <p>
@@ -66,62 +100,97 @@
     </section>
 
     <section id="funcionalidades" class="features">
-      <h2>Tudo que você precisa para o seu dia</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="notebook-pen"></i></div>
-          <h3>Tarefas do Dia</h3>
-          <p>
-            Visualize e organize suas tarefas em uma timeline clara. Adicione, complete e acompanhe
-            o progresso do dia.
-          </p>
+      <div class="features-layout">
+        <div class="features-left">
+          <h2>Tudo que você precisa para o seu dia</h2>
+          <span class="features-sub"
+            >Ferramentas pensadas para quem tem TDAH — simples, visuais e sem sobrecarga.</span
+          >
         </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="calendar"></i></div>
-          <h3>Calendário</h3>
-          <p>Planeje seus compromissos com antecedência. Veja o que vem a seguir sem esquecer.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="clock-plus"></i></div>
-          <h3>Modo Foco</h3>
-          <p>Timer visual para se concentrar em uma tarefa por vez. Menos distração, mais presença.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
-          <h3>Progresso</h3>
-          <p>Acompanhe sua sequência de dias e veja sua evolução. Pequenas vitórias constroem consistência.</p>
+        <div class="features-right">
+          <div class="feature-card bx">
+            <div class="feature-header">
+              <div class="feature-icon"><i data-lucide="notebook-pen"></i></div>
+              <h3>Tarefas do Dia</h3>
+            </div>
+            <div class="inner">
+              <p>
+                Visualize e organize suas tarefas em uma timeline clara. Adicione, complete e
+                acompanhe o progresso do dia.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card bx">
+            <div class="feature-header">
+              <div class="feature-icon"><i data-lucide="calendar"></i></div>
+              <h3>Calendário</h3>
+            </div>
+            <div class="inner">
+              <p>Planeje seus compromissos com antecedência. Veja o que vem a seguir sem esquecer.</p>
+            </div>
+          </div>
+
+          <div class="feature-card bx">
+            <div class="feature-header">
+              <div class="feature-icon"><i data-lucide="clock-plus"></i></div>
+              <h3>Modo Foco</h3>
+            </div>
+            <div class="inner">
+              <p>Timer visual para se concentrar em uma tarefa por vez. Menos distração, mais presença.</p>
+            </div>
+          </div>
+
+          <div class="feature-card bx">
+            <div class="feature-header">
+              <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
+              <h3>Progresso</h3>
+            </div>
+            <div class="inner">
+              <p>
+                Acompanhe sua sequência de dias e veja sua evolução. Pequenas vitórias constroem
+                a verdadeira consistência.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="screenshots" class="screenshots">
-      <h2>Veja o Lumora em ação</h2>
-      <p class="screenshots-sub">Screenshots reais em breve. Por enquanto, um preview da estrutura.</p>
-      <div class="screenshots-row">
-        <div class="screen-card">
-          <div class="screen-mockup placeholder-img"><span>Home<br />Tarefas</span></div>
-          <p>Tela Inicial</p>
-        </div>
-        <div class="screen-card featured">
-          <div class="screen-mockup placeholder-img"><span>Calendário</span></div>
-          <p>Calendário</p>
-        </div>
-        <div class="screen-card">
-          <div class="screen-mockup placeholder-img"><span>Modo<br />Foco</span></div>
-          <p>Modo Foco</p>
+      <h2>Planejamento que combina com você</h2>
+      <p class="screenshots-sub">Transformando tarefas planos claros.</p>
+
+      <div class="notebook-wrap">
+        <div class="pc" id="pc-mockup" aria-label="Notebook com telas do Lumora">
+          <div class="screenshots-row">
+            <div class="screen-card">
+              <div class="screen-mockup placeholder-img"><span>Home<br />Tarefas</span></div>
+              <p>Tela Inicial</p>
+            </div>
+            <div class="screen-card featured">
+              <div class="screen-mockup placeholder-img"><span>Calendário</span></div>
+              <p>Calendário</p>
+            </div>
+            <div class="screen-card">
+              <div class="screen-mockup placeholder-img"><span>Modo<br />Foco</span></div>
+              <p>Modo Foco</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="equipe" class="team">
       <h2>Quem fez o Lumora</h2>
-      <div class="team-grid">
-        <div class="team-card"><div class="avatar">DA</div><p>Divino Armando</p></div>
-        <div class="team-card"><div class="avatar">CT</div><p>Caroline Teresa</p></div>
-        <div class="team-card"><div class="avatar">FF</div><p>Felipe Jardim</p></div>
-        <div class="team-card"><div class="avatar">KJ</div><p>Kamila Júlia</p></div>
-        <div class="team-card"><div class="avatar">LT</div><p>Luiza Trevenzoli</p></div>
-        <div class="team-card"><div class="avatar">NM</div><p>Nicole Mikaely</p></div>
+      <p class="team-sub">Estudantes de Sistemas de Informação — PUC Minas, 3º semestre 2026</p>
+      <div id="bgluz" class="team-grid">
+        <div class="team-card meio imgg"><div class="avatar">DA</div><p class="team-name">Divino Armando</p></div>
+        <div class="team-card meio imgg"><div class="avatar">CT</div><p class="team-name">Caroline Teresa</p></div>
+        <div class="team-card meio imgg"><div class="avatar">FF</div><p class="team-name">Felipe Jardim</p></div>
+        <div class="team-card meio imgg"><div class="avatar">KJ</div><p class="team-name">Kamila Júlia</p></div>
+        <div class="team-card meio imgg"><div class="avatar">LT</div><p class="team-name">Luiza Trevenzoli</p></div>
+        <div class="team-card meio imgg"><div class="avatar">NM</div><p class="team-name">Nicole Mikaely</p></div>
       </div>
     </section>
 
@@ -132,6 +201,115 @@
 
     <script>
       lucide.createIcons();
+    </script>
+    <script>
+      const hamburger = document.querySelector("#nav-hamburger");
+      const links = document.querySelector("#nav-links");
+
+      hamburger?.addEventListener("click", () => {
+        const open = links.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      links?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          links.classList.remove("open");
+          hamburger?.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      const aboutInner = document.querySelector(".about-inner");
+      if (aboutInner) {
+        const aboutObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) e.target.classList.add("revealed");
+              else e.target.classList.remove("revealed");
+            });
+          },
+          { threshold: 0.15 }
+        );
+        aboutObserver.observe(aboutInner);
+      }
+
+      const pc = document.querySelector("#pc-mockup");
+      if (pc) {
+        const pcObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) e.target.classList.add("pc-ativo");
+              else e.target.classList.remove("pc-ativo");
+            });
+          },
+          { threshold: 0.2 }
+        );
+        pcObserver.observe(pc);
+      }
+
+      const cardsContainer = document.querySelector("#bgluz");
+
+      if (cardsContainer && window.matchMedia("(min-width: 1025px)").matches) {
+        let lastX = 0;
+        let lastY = 0;
+
+        cardsContainer.addEventListener("mousemove", (e) => {
+          lastX = e.clientX;
+          lastY = e.clientY;
+          requestAnimationFrame(() => {
+            const rect = cardsContainer.getBoundingClientRect();
+            const x = lastX - rect.left;
+            const y = lastY - rect.top;
+            cardsContainer.style.setProperty("--mouse-x", `${x}px`);
+            cardsContainer.style.setProperty("--mouse-y", `${y}px`);
+          });
+        });
+      }
+
+      if (window.matchMedia("(min-width: 600px)").matches) {
+        document.body.insertAdjacentHTML(
+          "beforeend",
+          '<div class="cursor-inner" aria-hidden="true"></div><div class="cursor-outer" aria-hidden="true"></div>'
+        );
+
+        const cursorInner = document.querySelector(".cursor-inner");
+        const cursorOuter = document.querySelector(".cursor-outer");
+
+        let mouseX = 0,
+          mouseY = 0;
+        let innerX = 0,
+          innerY = 0;
+        let outerX = 0,
+          outerY = 0;
+
+        const lerp = (start, end, factor) => start + (end - start) * factor;
+
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+          innerX = lerp(innerX, mouseX, 0.25);
+          innerY = lerp(innerY, mouseY, 0.25);
+
+          outerX = lerp(outerX, mouseX, 0.15);
+          outerY = lerp(outerY, mouseY, 0.15);
+
+          if (cursorInner) {
+            cursorInner.style.left = `${innerX}px`;
+            cursorInner.style.top = `${innerY}px`;
+          }
+
+          if (cursorOuter) {
+            cursorOuter.style.left = `${outerX}px`;
+            cursorOuter.style.top = `${outerY}px`;
+          }
+
+          requestAnimationFrame(animateCursor);
+        }
+
+        animateCursor();
+      }
     </script>
   </body>
 </html>
