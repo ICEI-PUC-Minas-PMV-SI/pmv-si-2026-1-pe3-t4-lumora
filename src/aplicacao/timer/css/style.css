@@ -6,6 +6,8 @@
   --english-ivy: #5E7D5A;
   --text-main: #4A3B4B;
   --white: #ffffff;
+  --color-gray-dark: #4b4b4b;
+  --color-purple-dark: #7a5c7b;
 
   --bg-gradient-light: linear-gradient(
     135deg,
@@ -31,15 +33,135 @@
 
 /* Layout da página */
 
-body {
+body.timer-page {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow-x: hidden;
   font-family: 'Outfit', sans-serif;
   background: var(--bg-gradient-light);
   transition: background 0.3s ease;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+/* ===== Menu lateral  */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 300px;
+  background: transparent;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-header .logo {
+  width: 55px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.sidebar-header h2 {
+  color: var(--color-purple-dark);
+  font-size: 2.75rem;
+  font-weight: 800;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 16px 0;
+}
+
+.sidebar-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  transition: all 0.2s ease;
+}
+
+.sidebar-btn:hover,
+.sidebar-btn.active {
+  background: var(--silt-green);
+  color: var(--text-main);
+}
+
+.sidebar-btn i {
+  width: 22px;
+  height: 22px;
+}
+
+.main-content {
+  margin-left: 300px;
+  padding: 20px 20px 48px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 300;
+  padding: 0;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  color: var(--color-purple-dark);
+}
+
+.hamburger-btn svg {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 180;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.timer-app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Card Principal */
@@ -194,7 +316,7 @@ h1 {
   justify-content: center;
 }
 
-button {
+.timer-card .buttons button {
   padding: 12px 20px;
   border: none;
   border-radius: 14px;
@@ -203,16 +325,16 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
+.timer-card .buttons button:hover {
   opacity: 0.9;
 }
 
-button:disabled {
+.timer-card .buttons button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-button:focus-visible,
+.timer-card .buttons button:focus-visible,
 .time-unit:focus-visible,
 .picker-option:focus-visible,
 .theme-toggle:focus-visible {
@@ -304,6 +426,77 @@ body.dark .picker-option:hover {
   background: rgba(255, 255, 255, 0.08);
 }
 
+body.dark .sidebar {
+  background: rgba(22, 20, 28, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+body.dark .sidebar-header h2 {
+  color: var(--sheer-lilac);
+}
+
+body.dark .sidebar-btn {
+  color: rgba(243, 238, 247, 0.92);
+}
+
+body.dark .sidebar-btn:hover,
+body.dark .sidebar-btn.active {
+  background: rgba(94, 125, 90, 0.45);
+  color: var(--text-dark);
+}
+
+body.dark .hamburger-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--sheer-lilac);
+}
+
+@media (max-width: 1400px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .sidebar-btn {
+    font-size: 1.3rem;
+    padding: 12px 16px;
+  }
+
+  .main-content {
+    margin-left: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 260px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background: white;
+    z-index: 200;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 72px 16px 40px;
+    min-height: 100vh;
+  }
+
+  body.dark .sidebar {
+    background: rgba(28, 26, 34, 0.98);
+  }
+}
+
 /* Responsividade */
 
 @media (max-width: 480px) {
@@ -329,7 +522,7 @@ body.dark .picker-option:hover {
     flex-direction: column;
   }
 
-  button {
+  .timer-card .buttons button {
     width: 100%;
   }
 }

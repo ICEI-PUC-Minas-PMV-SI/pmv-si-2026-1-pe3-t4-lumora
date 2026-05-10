@@ -178,3 +178,23 @@ themeToggle.addEventListener('click', function() {
 
 createPickerOptions()
 renderTimer()
+
+// Menu lateral
+const hamburgerBtn = document.getElementById('hamburger-btn')
+const sidebarEl = document.getElementById('sidebar')
+const sidebarOverlay = document.getElementById('sidebar-overlay')
+
+function toggleMenu() {
+    if (!sidebarEl) return
+    const isOpen = sidebarEl.classList.toggle('open')
+    sidebarOverlay?.classList.toggle('active', isOpen)
+    if (hamburgerBtn) {
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen))
+        hamburgerBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu')
+    }
+}
+
+hamburgerBtn?.addEventListener('click', toggleMenu)
+sidebarOverlay?.addEventListener('click', toggleMenu)
+
+if (typeof lucide !== 'undefined') lucide.createIcons()
