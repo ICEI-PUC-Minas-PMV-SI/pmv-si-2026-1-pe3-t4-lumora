@@ -381,6 +381,23 @@ daySwitcher?.addEventListener('touchend', endSwipe, { passive: true });
 daySwitcher?.addEventListener('mousedown', startSwipe);
 daySwitcher?.addEventListener('mouseup', endSwipe);
 
+// ====================== MENU HAMBURGER (mobile) ======================
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const sidebarEl = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+function toggleMenu() {
+    const isOpen = sidebarEl.classList.toggle('open');
+    sidebarOverlay.classList.toggle('active', isOpen);
+    if (hamburgerBtn) {
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+        hamburgerBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    }
+}
+
+hamburgerBtn?.addEventListener('click', toggleMenu);
+sidebarOverlay?.addEventListener('click', toggleMenu);
+
 // ====================== INICIALIZAÇÃO ======================
 function init() {
     if (tasks.length === 0) {
