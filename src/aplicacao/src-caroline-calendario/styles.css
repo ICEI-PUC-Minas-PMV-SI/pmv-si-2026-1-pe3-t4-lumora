@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+
 /* Color palette and reusable values */
 :root {
   --mystic-mauve: #C2A0E8;
@@ -9,6 +11,16 @@
   --text-muted: #5d4b75;
   --dark-purple: #3a2358;
   --white: #ffffff;
+
+  --color-gray-dark: #4b4b4b;
+  --color-purple-dark: #7A5C7B;
+  --silt-green: #B7CBB6;
+  --bg-gradient-light: linear-gradient(
+    135deg,
+    #EAE6F7 0%,
+    #dfe7df 45%,
+    #B7CBB6 100%
+  );
 }
 
 /* Makes sizing easier to control */
@@ -20,16 +32,125 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', Arial, Helvetica, sans-serif;
   color: var(--text-main);
-  background: linear-gradient(135deg, var(--calming-purple), var(--loafer));
+  background: var(--bg-gradient-light);
+}
+
+/* ====================== MENU LATERAL LUMORA ====================== */
+
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 300;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--color-purple-dark);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.hamburger-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 150;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+.sidebar-header {
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-header .logo {
+  width: 55px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  color: var(--color-purple-dark);
+  font-size: 2.75rem;
+  font-weight: 800;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-btn {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+  transition: all 0.2s ease;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.sidebar-btn i,
+.sidebar-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.sidebar-btn:hover,
+.sidebar-btn.active {
+  background: var(--silt-green);
+  color: var(--text-main);
 }
 
 /* Main page wrapper */
 .calendar-app {
   width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 32px 0 0;
+  margin-left: 300px;
+  margin-right: auto;
+  padding: 32px 32px 0;
 }
 
 /* Shared card style */
@@ -389,7 +510,7 @@ button:hover {
 /* Footer / project signature */
 .app-footer {
   width: min(1180px, calc(100% - 32px));
-  margin: 32px auto 0;
+  margin: 32px auto 0 300px;
   padding: 18px 12px 28px;
   text-align: center;
   color: var(--text-muted);
@@ -420,8 +541,61 @@ button:hover {
   opacity: 0.85;
 }
 
+/* Medium desktop layout */
+@media (max-width: 1400px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar-btn {
+    font-size: 1.3rem;
+    padding: 12px 16px;
+  }
+
+  .sidebar-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .calendar-app {
+    margin-left: 240px;
+  }
+
+  .app-footer {
+    margin-left: 240px;
+  }
+}
+
 /* Mobile layout */
 @media (max-width: 850px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 260px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background: var(--white);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .calendar-app {
+    width: min(100% - 32px, 1180px);
+    margin: 0 auto;
+    padding-top: 76px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .app-footer {
+    width: min(100% - 32px, 1180px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .day-summary,
   .calendar-header,
   .agenda-header {

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="profile-page">
-    <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu">
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar" type="button">
         <i data-lucide="menu"></i>
     </button>
     <div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -19,24 +19,28 @@
             <img src="../src/img/logo.png" alt="Logo Lumora" class="logo">
             <h2>Lumora</h2>
         </div>
-        <nav class="sidebar-nav">
-            <button class="sidebar-btn" onclick="window.location.href='../to-do-list/index.html'" type="button">
+        <nav class="sidebar-nav" aria-label="Menu principal">
+            <button class="sidebar-btn" type="button" data-route="../to-do-list/index.html">
                 <i data-lucide="notebook-pen"></i>
                 <span>início</span>
             </button>
-            <button class="sidebar-btn" type="button">
+
+            <button class="sidebar-btn" type="button" data-route="../src-caroline-calendario/index.html">
                 <i data-lucide="calendar"></i>
                 <span>Calendário</span>
             </button>
-            <button class="sidebar-btn" type="button">
+
+            <button class="sidebar-btn" type="button" data-route="../perfil/index.html">
                 <i data-lucide="bar-chart-3"></i>
                 <span>Progresso</span>
             </button>
-            <button class="sidebar-btn" type="button">
+
+            <button class="sidebar-btn" type="button" data-route="../timer/index.html">
                 <i data-lucide="clock-plus"></i>
                 <span>Modo Foco</span>
             </button>
-            <button class="sidebar-btn active" type="button">
+
+            <button class="sidebar-btn active" type="button" data-route="../perfil/index.html" aria-current="page">
                 <i data-lucide="user-round"></i>
                 <span>Perfil</span>
             </button>

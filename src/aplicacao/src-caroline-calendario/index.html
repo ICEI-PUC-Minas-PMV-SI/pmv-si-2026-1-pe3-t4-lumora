@@ -1,16 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Calendário Lumora</title>
 
+  <!-- Ícones usados no menu lateral -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="calendar-page">
+
+  <!-- Botão do menu mobile -->
+  <button
+    class="hamburger-btn"
+    id="hamburger-btn"
+    aria-label="Abrir menu"
+    aria-expanded="false"
+    aria-controls="sidebar"
+    type="button"
+  >
+    <i data-lucide="menu"></i>
+  </button>
+
+  <!-- Overlay usado para fechar o menu no mobile -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- Menu lateral padrão Lumora -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <img src="../src/img/logo.png" alt="Logo Lumora" class="logo">
+      <h2>Lumora</h2>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Menu principal">
+      <button class="sidebar-btn" type="button" data-route="../to-do-list/index.html">
+        <i data-lucide="notebook-pen"></i>
+        <span>início</span>
+      </button>
+
+      <button class="sidebar-btn active" type="button" data-route="../src-caroline-calendario/index.html" aria-current="page">
+        <i data-lucide="calendar"></i>
+        <span>Calendário</span>
+      </button>
+
+      <button class="sidebar-btn" type="button" data-route="../perfil/index.html">
+        <i data-lucide="bar-chart-3"></i>
+        <span>Progresso</span>
+      </button>
+
+      <button class="sidebar-btn" type="button" data-route="../timer/index.html">
+        <i data-lucide="clock-plus"></i>
+        <span>Modo Foco</span>
+      </button>
+
+      <button class="sidebar-btn" type="button" data-route="../perfil/index.html">
+        <i data-lucide="user-round"></i>
+        <span>Perfil</span>
+      </button>
+    </nav>
+  </aside>
+
   <main class="calendar-app">
     <!-- selected day summary, mood input and expected tasks -->
     <section class="day-summary">
@@ -90,7 +142,7 @@
   <footer class="app-footer">
     <p>
       Desenvolvido por <strong>Caroline Selvecki</strong> ·
-      <a href="mailto:carolineselvecki@gmail.com">carolineselvecki.qa@gmail.com</a>
+      <a href="mailto:carolineselvecki.qa@gmail.com">carolineselvecki.qa@gmail.com</a>
     </p>
     <p class="footer-note">
       Interface de calendário desenvolvida para fins de estudo e demonstração. Algumas funcionalidades podem ser simuladas.

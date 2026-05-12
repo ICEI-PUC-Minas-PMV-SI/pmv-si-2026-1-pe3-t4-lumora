@@ -15,7 +15,12 @@ const elements = {
   todayButton: document.getElementById("todayButton"),
   tomorrowButton: document.getElementById("tomorrowButton"),
   previousWeekButton: document.getElementById("previousWeekButton"),
-  nextWeekButton: document.getElementById("nextWeekButton")
+  nextWeekButton: document.getElementById("nextWeekButton"),
+
+  hamburgerButton: document.getElementById("hamburger-btn"),
+  sidebar: document.getElementById("sidebar"),
+  sidebarOverlay: document.getElementById("sidebar-overlay"),
+  sidebarButtons: document.querySelectorAll(".sidebar-btn[data-route]")
 };
 
 
@@ -444,6 +449,42 @@ const actions = {
     state.visibleWeekStart = dateUtils.addDays(state.visibleWeekStart, 7);
     state.selectedDate = state.visibleWeekStart;
     render.all();
+  },
+
+  // Opens or closes the sidebar menu on mobile.
+  toggleMenu() {
+    if (!elements.sidebar || !elements.sidebarOverlay || !elements.hamburgerButton) {
+      return;
+    }
+
+    elements.sidebar.classList.toggle("open");
+    elements.sidebarOverlay.classList.toggle("active");
+
+    const isOpen = elements.sidebar.classList.contains("open");
+    elements.hamburgerButton.setAttribute("aria-expanded", String(isOpen));
+    elements.hamburgerButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+  },
+
+  // Closes the sidebar menu after overlay click or navigation.
+  closeMenu() {
+    if (!elements.sidebar || !elements.sidebarOverlay || !elements.hamburgerButton) {
+      return;
+    }
+
+    elements.sidebar.classList.remove("open");
+    elements.sidebarOverlay.classList.remove("active");
+    elements.hamburgerButton.setAttribute("aria-expanded", "false");
+    elements.hamburgerButton.setAttribute("aria-label", "Abrir menu");
+  },
+
+  // Redirects the user to the page configured in data-route.
+  navigateTo(route) {
+    if (!route) {
+      return;
+    }
+
+    this.closeMenu();
+    window.location.href = route;
   }
 };
 
@@ -473,6 +514,24 @@ const events = {
     elements.nextWeekButton.addEventListener("click", () => {
       actions.goToNextWeek();
     });
+
+    if (elements.hamburgerButton) {
+      elements.hamburgerButton.addEventListener("click", () => {
+        actions.toggleMenu();
+      });
+    }
+
+    if (elements.sidebarOverlay) {
+      elements.sidebarOverlay.addEventListener("click", () => {
+        actions.closeMenu();
+      });
+    }
+
+    elements.sidebarButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        actions.navigateTo(button.dataset.route);
+      });
+    });
   }
 };
 
@@ -485,6 +544,11 @@ const app = {
   init() {
     events.bind();
     render.all();
+
+    // Renders Lucide icons after the page loads.
+    if (typeof lucide !== "undefined") {
+      lucide.createIcons();
+    }
   }
 };
 
