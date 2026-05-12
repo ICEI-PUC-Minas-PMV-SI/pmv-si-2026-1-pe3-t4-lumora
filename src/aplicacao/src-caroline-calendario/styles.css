@@ -28,13 +28,25 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Page background and default font */
 body {
   margin: 0;
+  width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: 'Outfit', Arial, Helvetica, sans-serif;
   color: var(--text-main);
   background: var(--bg-gradient-light);
+}
+
+button,
+input {
+  font-family: inherit;
 }
 
 /* ====================== MENU LATERAL LUMORA ====================== */
@@ -137,6 +149,7 @@ body {
 .sidebar-btn svg {
   width: 22px;
   height: 22px;
+  flex-shrink: 0;
 }
 
 .sidebar-btn:hover,
@@ -157,6 +170,8 @@ body {
 .day-summary,
 .calendar-card,
 .agenda-card {
+  width: 100%;
+  max-width: 100%;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 28px;
   box-shadow: 0 18px 45px rgba(80, 58, 105, 0.16);
@@ -165,7 +180,7 @@ body {
 /* Top summary layout */
 .day-summary {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 32px;
   padding: 28px;
   margin-bottom: 24px;
@@ -185,6 +200,16 @@ h1,
 h2,
 p {
   margin-top: 0;
+}
+
+h1,
+h2,
+p,
+span,
+label,
+li,
+a {
+  overflow-wrap: anywhere;
 }
 
 /* Selected day title */
@@ -227,6 +252,7 @@ h2 {
 /* Text input accepts normal text and emojis */
 #moodInput {
   width: 100%;
+  max-width: 100%;
   border: 2px solid rgba(147, 190, 164, 0.7);
   border-radius: 16px;
   padding: 13px 15px;
@@ -249,6 +275,7 @@ h2 {
 /* Task summary has room for future backend tasks */
 .summary-tasks {
   min-height: 180px;
+  min-width: 0;
 }
 
 .summary-tasks ul {
@@ -259,6 +286,7 @@ h2 {
   gap: 10px;
   max-height: 240px;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 6px;
 }
 
@@ -283,9 +311,11 @@ h2 {
   margin-top: 2px;
   accent-color: var(--shiny-pale-green);
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .summary-task-content {
+  min-width: 0;
   display: grid;
   gap: 4px;
 }
@@ -335,6 +365,7 @@ h2 {
 .calendar-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -363,13 +394,14 @@ button:hover {
   font-size: 1.8rem;
   background: var(--shiny-pale-green);
   color: var(--dark-purple);
+  flex-shrink: 0;
 }
 
 /* Weekly calendar grid */
 .calendar-weekdays,
 .calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .calendar-weekdays {
@@ -386,6 +418,8 @@ button:hover {
 
 /* Individual day card */
 .day-cell {
+  width: 100%;
+  min-width: 0;
   min-height: 210px;
   padding: 14px;
   border: 1px solid rgba(147, 190, 164, 0.45);
@@ -416,6 +450,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 6px;
   margin-bottom: 14px;
   font-weight: 800;
 }
@@ -427,6 +462,7 @@ button:hover {
   background: var(--green-tint);
   color: var(--dark-purple);
   font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 /* Task preview inside calendar cells */
@@ -461,12 +497,14 @@ button:hover {
 /* Full day agenda timeline */
 .agenda-timeline {
   display: grid;
+  width: 100%;
+  overflow-x: hidden;
   border-top: 1px solid rgba(58, 35, 88, 0.15);
 }
 
 .agenda-hour {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 80px minmax(0, 1fr);
   min-height: 72px;
   border-bottom: 1px solid rgba(58, 35, 88, 0.12);
 }
@@ -480,6 +518,7 @@ button:hover {
 }
 
 .agenda-content {
+  min-width: 0;
   position: relative;
   padding: 10px 0 10px 16px;
   border-left: 2px solid rgba(194, 160, 232, 0.55);
@@ -487,7 +526,8 @@ button:hover {
 
 /* Task block inside the 24h agenda */
 .agenda-task {
-  max-width: 620px;
+  width: min(620px, 100%);
+  max-width: 100%;
   padding: 12px 14px;
   border-radius: 16px;
   background: var(--calming-purple);
@@ -541,7 +581,7 @@ button:hover {
   opacity: 0.85;
 }
 
-/* Medium desktop layout */
+/* Large desktop adjustment */
 @media (max-width: 1400px) {
   .sidebar {
     width: 240px;
@@ -565,21 +605,58 @@ button:hover {
   }
 }
 
-/* Mobile layout */
+/* Tablet landscape and smaller laptops */
+@media (max-width: 1180px) {
+  .calendar-app {
+    width: calc(100% - 240px);
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .day-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(7, minmax(96px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .calendar-weekdays {
+    grid-template-columns: repeat(7, minmax(96px, 1fr));
+    overflow-x: auto;
+  }
+
+  .day-cell {
+    min-height: 190px;
+  }
+}
+
+/* Tablets and mobile: menu becomes drawer */
 @media (max-width: 850px) {
   .hamburger-btn {
     display: flex;
   }
 
   .sidebar {
-    width: 260px;
+    width: min(280px, 82vw);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     background: var(--white);
+    box-shadow: 8px 0 28px rgba(0, 0, 0, 0.12);
   }
 
   .sidebar.open {
     transform: translateX(0);
+  }
+
+  .sidebar-header h2 {
+    font-size: 2rem;
+  }
+
+  .sidebar-btn {
+    font-size: 1.15rem;
   }
 
   .calendar-app {
@@ -604,15 +681,173 @@ button:hover {
     align-items: stretch;
   }
 
+  .calendar-header {
+    gap: 16px;
+  }
+
+  .calendar-actions {
+    justify-content: flex-start;
+  }
+
   .calendar-grid {
     grid-template-columns: 1fr;
+    overflow-x: visible;
   }
 
   .calendar-weekdays {
     display: none;
   }
 
+  .day-cell {
+    min-height: auto;
+  }
+
   .agenda-hour {
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+}
+
+/* Small phones and foldable narrow screens */
+@media (max-width: 430px) {
+  .calendar-app {
+    width: calc(100% - 20px);
+    padding-top: 72px;
+  }
+
+  .day-summary,
+  .calendar-card,
+  .agenda-card {
+    border-radius: 20px;
+  }
+
+  .day-summary,
+  .calendar-card,
+  .agenda-card {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .summary-label {
+    font-size: 0.74rem;
+  }
+
+  #summaryFullDate {
+    font-size: 0.96rem;
+  }
+
+  .mood-box {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  #moodInput {
+    font-size: 0.92rem;
+    padding: 11px 12px;
+  }
+
+  .summary-tasks ul {
+    max-height: 300px;
+  }
+
+  .calendar-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 42px 42px;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .calendar-actions button {
+    padding: 10px 8px;
+    font-size: 0.86rem;
+  }
+
+  .calendar-actions .arrow-button {
+    width: 42px;
+    height: 42px;
+    font-size: 1.55rem;
+  }
+
+  .day-cell {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .agenda-hour {
+    grid-template-columns: 56px minmax(0, 1fr);
+    min-height: 64px;
+  }
+
+  .agenda-time {
+    padding-right: 8px;
+    font-size: 0.75rem;
+  }
+
+  .agenda-content {
+    padding-left: 10px;
+  }
+
+  .agenda-task {
+    padding: 10px 12px;
+  }
+
+  .app-footer {
+    width: calc(100% - 20px);
+    font-size: 0.78rem;
+  }
+}
+
+/* Very narrow screens: iPhone SE / Galaxy Fold style widths */
+@media (max-width: 360px) {
+  .calendar-app {
+    width: calc(100% - 14px);
+  }
+
+  .hamburger-btn {
+    top: 12px;
+    left: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .day-summary,
+  .calendar-card,
+  .agenda-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .calendar-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .calendar-actions .arrow-button {
+    width: 100%;
+  }
+
+  .summary-tasks li {
+    padding: 10px 12px;
+  }
+
+  .task-check-row {
+    gap: 8px;
+  }
+
+  .agenda-hour {
+    grid-template-columns: 50px minmax(0, 1fr);
+  }
+
+  .agenda-time {
+    font-size: 0.7rem;
+  }
+
+  .sidebar {
+    width: min(260px, 86vw);
   }
 }
