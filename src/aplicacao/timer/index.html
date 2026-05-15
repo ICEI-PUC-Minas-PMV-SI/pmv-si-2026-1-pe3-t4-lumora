@@ -13,49 +13,28 @@
     rel="stylesheet"
   >
 
-  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="timer-page">
 
-  <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
-    <i data-lucide="menu"></i>
-  </button>
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <!-- Topo -->
+   <header class="top-bar">
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-header">
+    <div class="logo-area">
       <img src="../src/img/logo.png" alt="Logo Lumora" class="logo">
-      <h2>Lumora</h2>
+      <h2 class="logo-title">Lumora</h2>
     </div>
-    <nav class="sidebar-nav" aria-label="Menu principal">
-      <button class="sidebar-btn" type="button" data-route="../to-do-list/index.html">
-        <i data-lucide="notebook-pen"></i>
-        <span>início</span>
-      </button>
-      <button class="sidebar-btn" type="button" data-route="../src-caroline-calendario/index.html">
-        <i data-lucide="calendar"></i>
-        <span>Calendário</span>
-      </button>
-      <button class="sidebar-btn" type="button" data-route="../perfil/index.html">
-        <i data-lucide="bar-chart-3"></i>
-        <span>Progresso</span>
-      </button>
-      <button class="sidebar-btn active" type="button" data-route="../timer/index.html" aria-current="page">
-        <i data-lucide="clock-plus"></i>
-        <span>Modo Foco</span>
-      </button>
-      <button class="sidebar-btn" type="button" data-route="../perfil/index.html">
-        <i data-lucide="user-round"></i>
-        <span>Perfil</span>
-      </button>
-    </nav>
-  </aside>
 
-  <div class="main-content">
-  <!-- Botão de tema -->
-  <button class="theme-toggle" type="button">🌙</button>
+    <!-- Botão tema -->
+     <button class="theme-toggle">🌙</button>
 
+   </header>
+
+   <!-- Botão voltar -->
+   <a href="../to-do-list/index.html" class="back-button">~</a> 
+     
+  <!-- Timer -->
   <main class="timer-app">
     <section class="timer-card" aria-labelledby="timer-title">
 
@@ -99,7 +78,6 @@
 
     </section>
   </main>
-  </div>
 
   <script src="js/script.js"></script>
 

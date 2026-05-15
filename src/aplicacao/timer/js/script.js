@@ -30,7 +30,7 @@ function renderTimer() {
     minutesElement.textContent = String(minutes).padStart(2, '0')
     secondsElement.textContent = String(seconds).padStart(2, '0')
     
-    const progressValue = (time / initialTime) * totalProgress
+    const progressValue = initialTime > 0 ? (time / initialTime) * totalProgress : 0
     progress.style.strokeDashoffset = -(totalProgress - progressValue)
 }
 
@@ -178,49 +178,3 @@ themeToggle.addEventListener('click', function() {
 
 createPickerOptions()
 renderTimer()
-
-// ====================== MENU LATERAL ======================
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const sidebarEl = document.getElementById('sidebar');
-const sidebarOverlay = document.getElementById('sidebar-overlay');
-const sidebarButtons = document.querySelectorAll('.sidebar-btn[data-route]');
-
-function closeMenu() {
-    sidebarEl?.classList.remove('open');
-    sidebarOverlay?.classList.remove('active');
-
-    if (hamburgerBtn) {
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-        hamburgerBtn.setAttribute('aria-label', 'Abrir menu');
-    }
-}
-
-function toggleMenu() {
-    if (!sidebarEl) return;
-
-    const isOpen = sidebarEl.classList.toggle('open');
-    sidebarOverlay?.classList.toggle('active', isOpen);
-
-    if (hamburgerBtn) {
-        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
-        hamburgerBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
-    }
-}
-
-function navigateToPage(route) {
-    if (!route) return;
-
-    closeMenu();
-    window.location.href = route;
-}
-
-hamburgerBtn?.addEventListener('click', toggleMenu);
-sidebarOverlay?.addEventListener('click', closeMenu);
-
-sidebarButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-        navigateToPage(button.dataset.route);
-    });
-});
-
-if (typeof lucide !== 'undefined') lucide.createIcons()
